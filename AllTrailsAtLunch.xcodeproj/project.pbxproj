@@ -7,15 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DBBA66067307CEBCD00D3C5 /* libPods-AllTrailsAtLunch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAE1F92828EE1F2440CA7A3 /* libPods-AllTrailsAtLunch.a */; };
 		FEF6FACD283057D600CAFC5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FACC283057D600CAFC5E /* AppDelegate.swift */; };
 		FEF6FACF283057D600CAFC5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FACE283057D600CAFC5E /* SceneDelegate.swift */; };
 		FEF6FAD1283057D600CAFC5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FAD0283057D600CAFC5E /* ViewController.swift */; };
 		FEF6FAD4283057D600CAFC5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF6FAD2283057D600CAFC5E /* Main.storyboard */; };
 		FEF6FAD6283057D700CAFC5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FEF6FAD5283057D700CAFC5E /* Assets.xcassets */; };
 		FEF6FAD9283057D700CAFC5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF6FAD7283057D700CAFC5E /* LaunchScreen.storyboard */; };
+		FEF6FAE3283058AF00CAFC5E /* PesentationProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FAE2283058AF00CAFC5E /* PesentationProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8B6F520B16280EAA5875215A /* Pods-AllTrailsAtLunch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTrailsAtLunch.release.xcconfig"; path = "Target Support Files/Pods-AllTrailsAtLunch/Pods-AllTrailsAtLunch.release.xcconfig"; sourceTree = "<group>"; };
+		8FAE1F92828EE1F2440CA7A3 /* libPods-AllTrailsAtLunch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AllTrailsAtLunch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA93456A80C63185E1E63998 /* Pods-AllTrailsAtLunch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTrailsAtLunch.debug.xcconfig"; path = "Target Support Files/Pods-AllTrailsAtLunch/Pods-AllTrailsAtLunch.debug.xcconfig"; sourceTree = "<group>"; };
 		FEF6FAC9283057D600CAFC5E /* AllTrailsAtLunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTrailsAtLunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF6FACC283057D600CAFC5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEF6FACE283057D600CAFC5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +29,7 @@
 		FEF6FAD5283057D700CAFC5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FEF6FAD8283057D700CAFC5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FEF6FADA283057D700CAFC5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FEF6FAE2283058AF00CAFC5E /* PesentationProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PesentationProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DBBA66067307CEBCD00D3C5 /* libPods-AllTrailsAtLunch.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		59FB46C9B3D4E1D4E60F20FE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CA93456A80C63185E1E63998 /* Pods-AllTrailsAtLunch.debug.xcconfig */,
+				8B6F520B16280EAA5875215A /* Pods-AllTrailsAtLunch.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C1B17C040C052BB035813164 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8FAE1F92828EE1F2440CA7A3 /* libPods-AllTrailsAtLunch.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FEF6FAC0283057D600CAFC5E = {
 			isa = PBXGroup;
 			children = (
 				FEF6FACB283057D600CAFC5E /* AllTrailsAtLunch */,
 				FEF6FACA283057D600CAFC5E /* Products */,
+				59FB46C9B3D4E1D4E60F20FE /* Pods */,
+				C1B17C040C052BB035813164 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +82,7 @@
 		FEF6FACB283057D600CAFC5E /* AllTrailsAtLunch */ = {
 			isa = PBXGroup;
 			children = (
+				FEF6FAE02830589E00CAFC5E /* Presentation */,
 				FEF6FACC283057D600CAFC5E /* AppDelegate.swift */,
 				FEF6FACE283057D600CAFC5E /* SceneDelegate.swift */,
 				FEF6FAD0283057D600CAFC5E /* ViewController.swift */,
@@ -67,6 +94,22 @@
 			path = AllTrailsAtLunch;
 			sourceTree = "<group>";
 		};
+		FEF6FAE02830589E00CAFC5E /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				FEF6FAE1283058A300CAFC5E /* Common */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		FEF6FAE1283058A300CAFC5E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FEF6FAE2283058AF00CAFC5E /* PesentationProtocols.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +117,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FEF6FADD283057D700CAFC5E /* Build configuration list for PBXNativeTarget "AllTrailsAtLunch" */;
 			buildPhases = (
+				8B2764DA76C779D526C00341 /* [CP] Check Pods Manifest.lock */,
 				FEF6FAC5283057D600CAFC5E /* Sources */,
 				FEF6FAC6283057D600CAFC5E /* Frameworks */,
 				FEF6FAC7283057D600CAFC5E /* Resources */,
+				502CD1542B641B71B2015969 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -133,11 +178,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		502CD1542B641B71B2015969 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllTrailsAtLunch/Pods-AllTrailsAtLunch-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllTrailsAtLunch/Pods-AllTrailsAtLunch-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllTrailsAtLunch/Pods-AllTrailsAtLunch-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8B2764DA76C779D526C00341 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-AllTrailsAtLunch-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FEF6FAC5283057D600CAFC5E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FEF6FAE3283058AF00CAFC5E /* PesentationProtocols.swift in Sources */,
 				FEF6FAD1283057D600CAFC5E /* ViewController.swift in Sources */,
 				FEF6FACD283057D600CAFC5E /* AppDelegate.swift in Sources */,
 				FEF6FACF283057D600CAFC5E /* SceneDelegate.swift in Sources */,
@@ -282,12 +370,14 @@
 		};
 		FEF6FADE283057D700CAFC5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA93456A80C63185E1E63998 /* Pods-AllTrailsAtLunch.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DTFVEX3HCR;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllTrailsAtLunch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -305,17 +395,21 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = NO;
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Debug;
 		};
 		FEF6FADF283057D700CAFC5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8B6F520B16280EAA5875215A /* Pods-AllTrailsAtLunch.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DTFVEX3HCR;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllTrailsAtLunch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -333,6 +427,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_WORKSPACE = NO;
 			};
 			name = Release;
 		};
