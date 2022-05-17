@@ -23,6 +23,7 @@ class ContainerSwitchPresenter: Presentable {
     }
     
     func setup() {
+        print("What \(LocationManager.shared.authorizationStatus == .notDetermined)")
         self.display(.populated)
     }
     

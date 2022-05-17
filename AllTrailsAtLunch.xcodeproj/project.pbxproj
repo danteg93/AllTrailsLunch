@@ -17,6 +17,8 @@
 		FEF6FAE628313E0700CAFC5E /* LayoutReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FAE528313E0700CAFC5E /* LayoutReadyViewController.swift */; };
 		FEF6FAE8283167AF00CAFC5E /* ContainerSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FAE7283167AF00CAFC5E /* ContainerSwitchViewController.swift */; };
 		FEF6FAEA2832D86000CAFC5E /* ContainerSwitchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FAE92832D86000CAFC5E /* ContainerSwitchPresenter.swift */; };
+		FEF6FAEE2833E3F800CAFC5E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FAED2833E3F800CAFC5E /* LocationManager.swift */; };
+		FEF6FAF22834501D00CAFC5E /* DomainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FAF12834501D00CAFC5E /* DomainProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +36,8 @@
 		FEF6FAE528313E0700CAFC5E /* LayoutReadyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutReadyViewController.swift; sourceTree = "<group>"; };
 		FEF6FAE7283167AF00CAFC5E /* ContainerSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerSwitchViewController.swift; sourceTree = "<group>"; };
 		FEF6FAE92832D86000CAFC5E /* ContainerSwitchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerSwitchPresenter.swift; sourceTree = "<group>"; };
+		FEF6FAED2833E3F800CAFC5E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FEF6FAF12834501D00CAFC5E /* DomainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +90,8 @@
 		FEF6FACB283057D600CAFC5E /* AllTrailsAtLunch */ = {
 			isa = PBXGroup;
 			children = (
+				FEF6FAEC2833E3DB00CAFC5E /* Data */,
+				FEF6FAEB2833E3B700CAFC5E /* Domain */,
 				FEF6FAE02830589E00CAFC5E /* Presentation */,
 				FEF6FACC283057D600CAFC5E /* AppDelegate.swift */,
 				FEF6FACE283057D600CAFC5E /* SceneDelegate.swift */,
@@ -122,6 +128,30 @@
 				FEF6FAD2283057D600CAFC5E /* Main.storyboard */,
 			);
 			path = ContainerSwitch;
+			sourceTree = "<group>";
+		};
+		FEF6FAEB2833E3B700CAFC5E /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FEF6FAF028344FCC00CAFC5E /* Common */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FEF6FAEC2833E3DB00CAFC5E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				FEF6FAED2833E3F800CAFC5E /* LocationManager.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		FEF6FAF028344FCC00CAFC5E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FEF6FAF12834501D00CAFC5E /* DomainProtocols.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,7 +272,9 @@
 				FEF6FAE3283058AF00CAFC5E /* PesentationProtocols.swift in Sources */,
 				FEF6FAE628313E0700CAFC5E /* LayoutReadyViewController.swift in Sources */,
 				FEF6FAEA2832D86000CAFC5E /* ContainerSwitchPresenter.swift in Sources */,
+				FEF6FAEE2833E3F800CAFC5E /* LocationManager.swift in Sources */,
 				FEF6FAE8283167AF00CAFC5E /* ContainerSwitchViewController.swift in Sources */,
+				FEF6FAF22834501D00CAFC5E /* DomainProtocols.swift in Sources */,
 				FEF6FACD283057D600CAFC5E /* AppDelegate.swift in Sources */,
 				FEF6FACF283057D600CAFC5E /* SceneDelegate.swift in Sources */,
 			);
