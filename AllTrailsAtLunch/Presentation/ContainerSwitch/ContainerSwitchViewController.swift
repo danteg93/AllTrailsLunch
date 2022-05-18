@@ -9,12 +9,12 @@ import UIKit
 
 class ContainerSwitchViewController: LayoutReadyViewController, Displayable {
     
-    
-    var presenter: ContainerSwitchPresenter?
-    
-    
     typealias State = ContainerSwitchState
     typealias Presenter = ContainerSwitchPresenter
+    
+    private var activeViewController: UIViewController?
+    
+    var presenter: ContainerSwitchPresenter?
     
     override func viewDidLoad() {
         super.viewDidLoad()
