@@ -6,7 +6,7 @@
 //
 
 import Foundation
-
+import Combine
 
 struct ContainerSwitchState {
   var shouldReroute = false
@@ -18,12 +18,23 @@ class ContainerSwitchPresenter: Presentable {
     var error: Error?
     var display: DisplayLogic
     
+    var permissionsSubscription: AnyCancellable?
+    
     required init(display: @escaping DisplayLogic) {
         self.display = display
     }
     
     func setup() {
-        print("What \(LocationManager.shared.authorizationStatus == .notDetermined)")
+        //print("What \(LocationDataSource.shared.authorizationStatus == .notDetermined)")
+        print("Hello there")
+        self.permissionsSubscription = LocationPermissionsEntity.subscribe(arguments: .none) { result in
+            switch result {
+            case .success(let entity):
+                print("We got \(entity.permissionsStatus)")
+            case .failure:
+                print("error")
+            }
+        }
         self.display(.populated)
     }
     

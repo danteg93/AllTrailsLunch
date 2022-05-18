@@ -17,8 +17,12 @@
 		FEF6FAE628313E0700CAFC5E /* LayoutReadyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FAE528313E0700CAFC5E /* LayoutReadyViewController.swift */; };
 		FEF6FAE8283167AF00CAFC5E /* ContainerSwitchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FAE7283167AF00CAFC5E /* ContainerSwitchViewController.swift */; };
 		FEF6FAEA2832D86000CAFC5E /* ContainerSwitchPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FAE92832D86000CAFC5E /* ContainerSwitchPresenter.swift */; };
-		FEF6FAEE2833E3F800CAFC5E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FAED2833E3F800CAFC5E /* LocationManager.swift */; };
 		FEF6FAF22834501D00CAFC5E /* DomainProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FAF12834501D00CAFC5E /* DomainProtocols.swift */; };
+		FEF6FAF52834588B00CAFC5E /* LocationDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FAF42834588B00CAFC5E /* LocationDataSource.swift */; };
+		FEF6FAF8283459B800CAFC5E /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FAF7283459B800CAFC5E /* LocationManager.swift */; };
+		FEF6FAFB2835756200CAFC5E /* LocationPermissionsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FAFA2835756200CAFC5E /* LocationPermissionsEntity.swift */; };
+		FEF6FAFD283575C300CAFC5E /* DomainErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FAFC283575C300CAFC5E /* DomainErrors.swift */; };
+		FEF6FB00283576F800CAFC5E /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FAFF283576F800CAFC5E /* String+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,8 +40,12 @@
 		FEF6FAE528313E0700CAFC5E /* LayoutReadyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutReadyViewController.swift; sourceTree = "<group>"; };
 		FEF6FAE7283167AF00CAFC5E /* ContainerSwitchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerSwitchViewController.swift; sourceTree = "<group>"; };
 		FEF6FAE92832D86000CAFC5E /* ContainerSwitchPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerSwitchPresenter.swift; sourceTree = "<group>"; };
-		FEF6FAED2833E3F800CAFC5E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		FEF6FAF12834501D00CAFC5E /* DomainProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainProtocols.swift; sourceTree = "<group>"; };
+		FEF6FAF42834588B00CAFC5E /* LocationDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDataSource.swift; sourceTree = "<group>"; };
+		FEF6FAF7283459B800CAFC5E /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		FEF6FAFA2835756200CAFC5E /* LocationPermissionsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPermissionsEntity.swift; sourceTree = "<group>"; };
+		FEF6FAFC283575C300CAFC5E /* DomainErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainErrors.swift; sourceTree = "<group>"; };
+		FEF6FAFF283576F800CAFC5E /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,9 +98,10 @@
 		FEF6FACB283057D600CAFC5E /* AllTrailsAtLunch */ = {
 			isa = PBXGroup;
 			children = (
-				FEF6FAEC2833E3DB00CAFC5E /* Data */,
-				FEF6FAEB2833E3B700CAFC5E /* Domain */,
+				FEF6FAFE283576F100CAFC5E /* Common */,
 				FEF6FAE02830589E00CAFC5E /* Presentation */,
+				FEF6FAEB2833E3B700CAFC5E /* Domain */,
+				FEF6FAEC2833E3DB00CAFC5E /* Data */,
 				FEF6FACC283057D600CAFC5E /* AppDelegate.swift */,
 				FEF6FACE283057D600CAFC5E /* SceneDelegate.swift */,
 				FEF6FAD5283057D700CAFC5E /* Assets.xcassets */,
@@ -133,6 +142,8 @@
 		FEF6FAEB2833E3B700CAFC5E /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				FEF6FAF92835752E00CAFC5E /* Entities */,
+				FEF6FAF6283459B000CAFC5E /* Managers */,
 				FEF6FAF028344FCC00CAFC5E /* Common */,
 			);
 			path = Domain;
@@ -141,7 +152,7 @@
 		FEF6FAEC2833E3DB00CAFC5E /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				FEF6FAED2833E3F800CAFC5E /* LocationManager.swift */,
+				FEF6FAF42834588B00CAFC5E /* LocationDataSource.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -150,6 +161,31 @@
 			isa = PBXGroup;
 			children = (
 				FEF6FAF12834501D00CAFC5E /* DomainProtocols.swift */,
+				FEF6FAFC283575C300CAFC5E /* DomainErrors.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		FEF6FAF6283459B000CAFC5E /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				FEF6FAF7283459B800CAFC5E /* LocationManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		FEF6FAF92835752E00CAFC5E /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				FEF6FAFA2835756200CAFC5E /* LocationPermissionsEntity.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		FEF6FAFE283576F100CAFC5E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				FEF6FAFF283576F800CAFC5E /* String+Extension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -272,11 +308,15 @@
 				FEF6FAE3283058AF00CAFC5E /* PesentationProtocols.swift in Sources */,
 				FEF6FAE628313E0700CAFC5E /* LayoutReadyViewController.swift in Sources */,
 				FEF6FAEA2832D86000CAFC5E /* ContainerSwitchPresenter.swift in Sources */,
-				FEF6FAEE2833E3F800CAFC5E /* LocationManager.swift in Sources */,
 				FEF6FAE8283167AF00CAFC5E /* ContainerSwitchViewController.swift in Sources */,
+				FEF6FAFB2835756200CAFC5E /* LocationPermissionsEntity.swift in Sources */,
+				FEF6FAF52834588B00CAFC5E /* LocationDataSource.swift in Sources */,
+				FEF6FAFD283575C300CAFC5E /* DomainErrors.swift in Sources */,
+				FEF6FB00283576F800CAFC5E /* String+Extension.swift in Sources */,
 				FEF6FAF22834501D00CAFC5E /* DomainProtocols.swift in Sources */,
 				FEF6FACD283057D600CAFC5E /* AppDelegate.swift in Sources */,
 				FEF6FACF283057D600CAFC5E /* SceneDelegate.swift in Sources */,
+				FEF6FAF8283459B800CAFC5E /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

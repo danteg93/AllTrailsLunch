@@ -1,5 +1,5 @@
 //
-//  LocationManager.swift
+//  LocationDataSource.swift
 //  AllTrailsAtLunch
 //
 //  Created by Dante Garcia on 5/17/22.
@@ -7,11 +7,11 @@
 
 import CoreLocation
 
-class LocationManager: NSObject {
+class LocationDataSource: NSObject {
     
     typealias LocationPermissionsStateHandler = (CLAuthorizationStatus) -> Void
     
-    static let shared = LocationManager()
+    static let shared = LocationDataSource()
     
     private let locationManager = CLLocationManager()
     
@@ -20,9 +20,10 @@ class LocationManager: NSObject {
     override init() {
         super.init()
         self.locationManager.delegate = self
+        self.locationManager.requestWhenInUseAuthorization()
     }
     
-    var authorizationStatus:  CLAuthorizationStatus {
+    private var authorizationStatus:  CLAuthorizationStatus {
         return self.locationManager.authorizationStatus
     }
     
@@ -32,7 +33,7 @@ class LocationManager: NSObject {
     }
 }
 
-extension LocationManager: CLLocationManagerDelegate {
+extension LocationDataSource: CLLocationManagerDelegate {
     
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         guard manager == self.locationManager else { return }
@@ -40,3 +41,4 @@ extension LocationManager: CLLocationManagerDelegate {
     }
     
 }
+
