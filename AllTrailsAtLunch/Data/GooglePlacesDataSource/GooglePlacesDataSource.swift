@@ -32,13 +32,12 @@ class GooglePlacesDataSource {
     
     func findNearbyRestaurants(latitude: Double,
                                longitude: Double,
-                               radius: Int = 30000,
                                keyword: String? = nil,
                                completion: @escaping ApiResponse) {
         
         var parameters: [String: AnyHashable] = ["key": Obfuscator().decrypt(key: Constants.apiKey),
                                                  "location": "\(latitude),\(longitude)",
-                                                 "radius": radius,
+                                                 "rankby": "distance",
                                                  "type": "restaurant"]
         if let keyword = keyword {
             parameters["keyword"] = keyword

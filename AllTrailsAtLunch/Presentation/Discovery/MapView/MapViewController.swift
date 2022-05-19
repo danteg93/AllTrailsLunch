@@ -9,11 +9,20 @@ import Foundation
 import GoogleMaps
 import Combine
 
-class MapViewController: LayoutReadyViewController {
+class MapViewController: LayoutReadyViewController, Displayable {
+    
+    typealias State = MapViewState
+    typealias Presenter = MapViewPresenter
     
     var placesSub: AnyCancellable?
     
+    var presenter: MapViewPresenter?
+    
+    private var mapView: GMSMapView?
+    
     override func viewDidLoad() {
+        super.viewDidLoad()
+        self.createPresenter()
         if let currentLocation = CurrentLocationEntity.syncRequest() {
             let camera = GMSCameraPosition.camera(withLatitude: currentLocation.latitude,
                                                   longitude: currentLocation.longitude,
@@ -29,18 +38,56 @@ class MapViewController: LayoutReadyViewController {
     }
     
     override func viewIsReady() {
-        self.placesSub = NearbyRestaurantsEntity.subscribe { [weak self] (result) in
-            switch result {
-            case .success(let entity):
-                print("In the map got places \(entity.results.first)")
-            case .failure:
-                print("lol")
-            }
+        super.viewIsReady()
+        self.presenter?.setup()
+    }
+    
+    func display(_ displayableState: DisplayableState) {
+        switch displayableState {
+        case .stateNotRequested:
+            break
+        case .empty:
+            break
+        case .loading:
+            break
+        case .error:
+            break
+        case .populated:
+            self.updateMap()
         }
     }
     
-    private func findNearbyPlaces() {
+    private func updateMap() {
+        guard let mapView = self.mapView else {
+            self.createMap()
+            return
+        }
+        DispatchQueue.main.async {
+            guard let places = self.presenter?.viewModel.places else { return }
+            mapView.clear()
+            for place in places {
+                guard let location = place.geometry?.location else { continue }
+                let postition = CLLocationCoordinate2D(latitude: location.lat, longitude: location.lng)
+                let marker = GMSMarker(position: postition)
+                marker.title = place.name
+                marker.map = mapView
+            }
+            
+        }
         
+    }
+    
+    private func createMap() {
+        guard let currentLocation = self.presenter?.viewModel.currentLocation else { return }
+        DispatchQueue.main.async {
+            let camera = GMSCameraPosition.camera(withLatitude: currentLocation.latitude,
+                                                  longitude: currentLocation.longitude,
+                                                  zoom: 13.0)
+            let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
+            self.mapView = mapView
+            self.view.addSubview(mapView)
+            self.updateMap()
+        }
     }
     
     deinit {
