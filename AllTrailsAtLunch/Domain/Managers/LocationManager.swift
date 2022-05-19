@@ -38,4 +38,11 @@ class LocationManager {
         }
     }
     
+    func getCurrentLocation() -> CurrentLocationEntity? {
+        guard let currentCoordinate = self.locationDataSource.currentCoordinate else {
+            return nil
+        }
+        return CurrentLocationEntity(latitude: currentCoordinate.latitude, longitude: currentCoordinate.longitude)
+    }
+    
 }

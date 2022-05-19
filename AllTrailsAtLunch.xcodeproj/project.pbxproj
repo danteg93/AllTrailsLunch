@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DBBA66067307CEBCD00D3C5 /* libPods-AllTrailsAtLunch.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FAE1F92828EE1F2440CA7A3 /* libPods-AllTrailsAtLunch.a */; };
+		179011FE1553FDDA61187F20 /* Pods_AllTrailsAtLunch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217E43D51AB33939765B8D11 /* Pods_AllTrailsAtLunch.framework */; };
 		FEF6FACD283057D600CAFC5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FACC283057D600CAFC5E /* AppDelegate.swift */; };
 		FEF6FACF283057D600CAFC5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FACE283057D600CAFC5E /* SceneDelegate.swift */; };
 		FEF6FAD4283057D600CAFC5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF6FAD2283057D600CAFC5E /* Main.storyboard */; };
@@ -40,11 +40,13 @@
 		FEF6FB2B2836141000CAFC5E /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB2A2836141000CAFC5E /* ListViewController.swift */; };
 		FEF6FB2D2836146E00CAFC5E /* ListViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB2C2836146E00CAFC5E /* ListViewPresenter.swift */; };
 		FEF6FB2F28361D1700CAFC5E /* CurrentLocationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB2E28361D1700CAFC5E /* CurrentLocationEntity.swift */; };
+		FEF6FB312836284900CAFC5E /* RestTransportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB302836284900CAFC5E /* RestTransportManager.swift */; };
+		FEF6FB342836297600CAFC5E /* GooglePlacesRestCall.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB332836297600CAFC5E /* GooglePlacesRestCall.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		217E43D51AB33939765B8D11 /* Pods_AllTrailsAtLunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllTrailsAtLunch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6F520B16280EAA5875215A /* Pods-AllTrailsAtLunch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTrailsAtLunch.release.xcconfig"; path = "Target Support Files/Pods-AllTrailsAtLunch/Pods-AllTrailsAtLunch.release.xcconfig"; sourceTree = "<group>"; };
-		8FAE1F92828EE1F2440CA7A3 /* libPods-AllTrailsAtLunch.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AllTrailsAtLunch.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA93456A80C63185E1E63998 /* Pods-AllTrailsAtLunch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTrailsAtLunch.debug.xcconfig"; path = "Target Support Files/Pods-AllTrailsAtLunch/Pods-AllTrailsAtLunch.debug.xcconfig"; sourceTree = "<group>"; };
 		FEF6FAC9283057D600CAFC5E /* AllTrailsAtLunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTrailsAtLunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF6FACC283057D600CAFC5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -80,6 +82,8 @@
 		FEF6FB2A2836141000CAFC5E /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
 		FEF6FB2C2836146E00CAFC5E /* ListViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewPresenter.swift; sourceTree = "<group>"; };
 		FEF6FB2E28361D1700CAFC5E /* CurrentLocationEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLocationEntity.swift; sourceTree = "<group>"; };
+		FEF6FB302836284900CAFC5E /* RestTransportManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestTransportManager.swift; sourceTree = "<group>"; };
+		FEF6FB332836297600CAFC5E /* GooglePlacesRestCall.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesRestCall.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,7 +91,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DBBA66067307CEBCD00D3C5 /* libPods-AllTrailsAtLunch.a in Frameworks */,
+				179011FE1553FDDA61187F20 /* Pods_AllTrailsAtLunch.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -106,7 +110,7 @@
 		C1B17C040C052BB035813164 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8FAE1F92828EE1F2440CA7A3 /* libPods-AllTrailsAtLunch.a */,
+				217E43D51AB33939765B8D11 /* Pods_AllTrailsAtLunch.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,8 +192,9 @@
 		FEF6FAEC2833E3DB00CAFC5E /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				FEF6FB322836295C00CAFC5E /* GooglePlacesDataSource */,
 				FEF6FAF42834588B00CAFC5E /* LocationDataSource.swift */,
-				FEF6FB1A2835D34E00CAFC5E /* GooglePlacesDataSource.swift */,
+				FEF6FB302836284900CAFC5E /* RestTransportManager.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -273,6 +278,15 @@
 			path = ListView;
 			sourceTree = "<group>";
 		};
+		FEF6FB322836295C00CAFC5E /* GooglePlacesDataSource */ = {
+			isa = PBXGroup;
+			children = (
+				FEF6FB1A2835D34E00CAFC5E /* GooglePlacesDataSource.swift */,
+				FEF6FB332836297600CAFC5E /* GooglePlacesRestCall.swift */,
+			);
+			path = GooglePlacesDataSource;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -285,6 +299,7 @@
 				FEF6FAC6283057D600CAFC5E /* Frameworks */,
 				FEF6FAC7283057D600CAFC5E /* Resources */,
 				502CD1542B641B71B2015969 /* [CP] Copy Pods Resources */,
+				775B45D957612FC3382A464B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -363,6 +378,23 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllTrailsAtLunch/Pods-AllTrailsAtLunch-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		775B45D957612FC3382A464B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllTrailsAtLunch/Pods-AllTrailsAtLunch-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-AllTrailsAtLunch/Pods-AllTrailsAtLunch-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-AllTrailsAtLunch/Pods-AllTrailsAtLunch-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		8B2764DA76C779D526C00341 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -408,7 +440,9 @@
 				FEF6FB142835ABB000CAFC5E /* TroubleshootPresenter.swift in Sources */,
 				FEF6FB00283576F800CAFC5E /* String+Extension.swift in Sources */,
 				FEF6FB192835D26200CAFC5E /* Obfuscator.swift in Sources */,
+				FEF6FB342836297600CAFC5E /* GooglePlacesRestCall.swift in Sources */,
 				FEF6FB252836095F00CAFC5E /* MapViewController.swift in Sources */,
+				FEF6FB312836284900CAFC5E /* RestTransportManager.swift in Sources */,
 				FEF6FB2B2836141000CAFC5E /* ListViewController.swift in Sources */,
 				FEF6FB202836079800CAFC5E /* UIButton+Extension.swift in Sources */,
 				FEF6FAF22834501D00CAFC5E /* DomainProtocols.swift in Sources */,
@@ -598,7 +632,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = DTFVEX3HCR;
-				"EXCLUDED_ARCHS[sdk=*]" = arm64;
+				"EXCLUDED_ARCHS[sdk=iphonesimulator*]" = arm64;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AllTrailsAtLunch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

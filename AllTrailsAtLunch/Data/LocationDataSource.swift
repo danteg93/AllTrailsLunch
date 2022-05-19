@@ -26,6 +26,10 @@ class LocationDataSource: NSObject {
         return self.locationManager.authorizationStatus
     }
     
+    var currentCoordinate: CLLocationCoordinate2D? {
+        self.locationManager.location?.coordinate
+    }
+    
     func observeLocationPermissionStatus(handler: @escaping LocationPermissionsStateHandler) {
         self.locationPermissionsObserver = handler
         self.locationPermissionsObserver?(self.authorizationStatus)
