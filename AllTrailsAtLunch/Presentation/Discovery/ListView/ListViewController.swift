@@ -8,6 +8,10 @@
 import Foundation
 import UIKit
 
+protocol ListViewControllerDelegate: AnyObject {
+    func placeTapped(placeIdSelected: String)
+}
+
 class ListViewController: LayoutReadyViewController, Displayable {
         
     typealias State = ListViewState
@@ -22,6 +26,8 @@ class ListViewController: LayoutReadyViewController, Displayable {
     @IBOutlet private weak var tableView: UITableView!
     
     var presenter: ListViewPresenter?
+    
+    weak var delegate: ListViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,8 +68,10 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.listCellIdentifier, for: indexPath)
+        cell.selectionStyle = .none
         if let listCell = cell as? ListViewTableCell, let place = self.presenter?.viewModel.places[indexPath.row] {
-            let model = ListViewTableCellModel(title: place.name ?? "")
+            let model = ListViewTableCellModel(title: place.name ?? "",
+                                               placeId: place.placeId ?? "")
             listCell.setup(model: model)
         }
         return cell
@@ -71,6 +79,12 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return Constants.cellHeight
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: false)
+        guard let placeId = self.presenter?.viewModel.places[indexPath.row].placeId else { return }
+        self.delegate?.placeTapped(placeIdSelected: placeId)
     }
     
 }

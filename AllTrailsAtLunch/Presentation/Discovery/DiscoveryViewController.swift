@@ -81,6 +81,7 @@ class DiscoveryViewController: LayoutReadyViewController, Displayable {
         case .list:
             if self.listViewController == nil {
                 self.listViewController = ListViewController()
+                self.listViewController?.delegate = self
             }
             selectedViewController = self.listViewController
         }
@@ -102,6 +103,15 @@ class DiscoveryViewController: LayoutReadyViewController, Displayable {
                 self.modeSwitchButton.setTitle(Constants.listButtonTitle, for: .normal)
             }
             self.modeSwitchButton.alpha = 1.0
+        }
+    }
+    
+    private func showPlaceDetail() {
+        DispatchQueue.main.async {
+            let navController = UINavigationController(rootViewController: PlaceDetailViewController())
+            navController.setNavigationBarHidden(true, animated: false)
+            navController.modalPresentationStyle = .pageSheet
+            self.present(navController, animated: true, completion: nil)
         }
     }
     
@@ -159,4 +169,10 @@ extension DiscoveryViewController: UISearchBarDelegate {
         }
     }
     
+}
+
+extension DiscoveryViewController: ListViewControllerDelegate {
+    func placeTapped(placeIdSelected: String) {
+        self.showPlaceDetail()
+    }
 }

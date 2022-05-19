@@ -10,11 +10,14 @@ import UIKit
 
 struct ListViewTableCellModel {
     let title: String
+    let placeId: String
 }
 
 class ListViewTableCell: UITableViewCell {
     
     @IBOutlet private weak var titleLabel: UILabel!
+    
+    private(set) public var model: ListViewTableCellModel?
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -25,13 +28,14 @@ class ListViewTableCell: UITableViewCell {
     }
     
     override func prepareForReuse() {
-      super.prepareForReuse()
+        super.prepareForReuse()
     }
     
     func setup(model: ListViewTableCellModel) {
-      DispatchQueue.main.async {
-        self.titleLabel.text = model.title
-      }
+        DispatchQueue.main.async {
+            self.model = model
+            self.titleLabel.text = model.title
+        }
     }
     
 }

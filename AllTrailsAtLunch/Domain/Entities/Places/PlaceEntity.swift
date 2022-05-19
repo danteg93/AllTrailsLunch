@@ -24,6 +24,8 @@ struct PlaceEntity: Decodable {
     let rating: Double?
     let priceLevel: Int?
     let vicinity: String?
+    let placeId: String?
+    let userRatingsTotal: Int?
     
     enum CodingKeys: String, CodingKey {
         case name
@@ -31,6 +33,8 @@ struct PlaceEntity: Decodable {
         case rating
         case price_level
         case vicinity
+        case place_id
+        case user_ratings_total
     }
     
     init(from decoder: Decoder) throws {
@@ -40,5 +44,7 @@ struct PlaceEntity: Decodable {
         self.rating = try? values.decode(Double.self, forKey: .rating)
         self.priceLevel = try? values.decode(Int.self, forKey: .price_level)
         self.vicinity = try? values.decode(String.self, forKey: .vicinity)
+        self.placeId = try? values.decode(String.self, forKey: .place_id)
+        self.userRatingsTotal = try? values.decode(Int.self, forKey: .user_ratings_total)
     }
 }

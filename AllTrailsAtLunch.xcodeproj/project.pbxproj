@@ -13,6 +13,8 @@
 		FECACF6C28367D94005E4ABE /* PlaceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF6B28367D94005E4ABE /* PlaceEntity.swift */; };
 		FECACF7D2836D55A005E4ABE /* ListViewTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FECACF7C2836D55A005E4ABE /* ListViewTableCell.xib */; };
 		FECACF812836DB69005E4ABE /* ListViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF802836DB69005E4ABE /* ListViewTableCell.swift */; };
+		FECACF852836E53C005E4ABE /* PlaceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FECACF842836E53C005E4ABE /* PlaceDetailViewController.xib */; };
+		FECACF882836E55C005E4ABE /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF872836E55C005E4ABE /* PlaceDetailViewController.swift */; };
 		FEF6FACD283057D600CAFC5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FACC283057D600CAFC5E /* AppDelegate.swift */; };
 		FEF6FACF283057D600CAFC5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FACE283057D600CAFC5E /* SceneDelegate.swift */; };
 		FEF6FAD4283057D600CAFC5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF6FAD2283057D600CAFC5E /* Main.storyboard */; };
@@ -57,6 +59,8 @@
 		FECACF6B28367D94005E4ABE /* PlaceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceEntity.swift; sourceTree = "<group>"; };
 		FECACF7C2836D55A005E4ABE /* ListViewTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewTableCell.xib; sourceTree = "<group>"; };
 		FECACF802836DB69005E4ABE /* ListViewTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTableCell.swift; sourceTree = "<group>"; };
+		FECACF842836E53C005E4ABE /* PlaceDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceDetailViewController.xib; sourceTree = "<group>"; };
+		FECACF872836E55C005E4ABE /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 		FEF6FAC9283057D600CAFC5E /* AllTrailsAtLunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTrailsAtLunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF6FACC283057D600CAFC5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEF6FACE283057D600CAFC5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +163,15 @@
 			path = ListViewTableCell;
 			sourceTree = "<group>";
 		};
+		FECACF832836E513005E4ABE /* PlaceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				FECACF842836E53C005E4ABE /* PlaceDetailViewController.xib */,
+				FECACF872836E55C005E4ABE /* PlaceDetailViewController.swift */,
+			);
+			path = PlaceDetail;
+			sourceTree = "<group>";
+		};
 		FEF6FAC0283057D600CAFC5E = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +209,7 @@
 		FEF6FAE02830589E00CAFC5E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				FECACF832836E513005E4ABE /* PlaceDetail */,
 				FEF6FB082835A61900CAFC5E /* Troubleshoot */,
 				FEF6FB012835A3E800CAFC5E /* Discovery */,
 				FEF6FAE428307A8200CAFC5E /* ContainerSwitch */,
@@ -398,6 +412,7 @@
 				FEF6FB292836140100CAFC5E /* ListViewController.xib in Resources */,
 				FEF6FAD9283057D700CAFC5E /* LaunchScreen.storyboard in Resources */,
 				FEF6FAD6283057D700CAFC5E /* Assets.xcassets in Resources */,
+				FECACF852836E53C005E4ABE /* PlaceDetailViewController.xib in Resources */,
 				FEF6FAD4283057D600CAFC5E /* Main.storyboard in Resources */,
 				FEF6FB052835A40600CAFC5E /* DiscoveryViewController.xib in Resources */,
 			);
@@ -491,6 +506,7 @@
 				FECACF812836DB69005E4ABE /* ListViewTableCell.swift in Sources */,
 				FEF6FB312836284900CAFC5E /* RestTransportManager.swift in Sources */,
 				FEF6FB2B2836141000CAFC5E /* ListViewController.swift in Sources */,
+				FECACF882836E55C005E4ABE /* PlaceDetailViewController.swift in Sources */,
 				FEF6FB202836079800CAFC5E /* UIButton+Extension.swift in Sources */,
 				FEF6FAF22834501D00CAFC5E /* DomainProtocols.swift in Sources */,
 				FEF6FACD283057D600CAFC5E /* AppDelegate.swift in Sources */,

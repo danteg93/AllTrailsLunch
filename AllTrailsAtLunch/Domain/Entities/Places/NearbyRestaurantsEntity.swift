@@ -28,7 +28,7 @@ struct NearbyRestaurantsEntity: AsyncEntity, ObservableEntity, DataDecodableEnti
     }
     
     static func subscribe(arguments: NearbyRestaurantsArguments? = nil, updateHandler: @escaping ResultHandler) -> AnyCancellable? {
-        PlacesRepo.shared.latestSearchCache.sink(receiveCompletion: { _ in }, receiveValue: { result in
+        PlacesRepo.shared.latestSearchPublisher.sink(receiveCompletion: { _ in }, receiveValue: { result in
             updateHandler(result)
         })
     }

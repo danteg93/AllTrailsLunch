@@ -17,7 +17,9 @@ class PlacesRepo {
     
     //var locationPermissionsPublisher = EntityPublisher.Passthrough<NearbyRestaurantsEntity>()
     
-    var latestSearchCache = EntityPublisher.Cached<NearbyRestaurantsEntity>(.success(NearbyRestaurantsEntity(results: [])))
+    var latestSearchPublisher = EntityPublisher.Cached<NearbyRestaurantsEntity>(.success(NearbyRestaurantsEntity(results: [])))
+    
+    private var latestSearchCache: [String: PlaceEntity] = [:]
     
     private init() {}
     static let shared = PlacesRepo()
@@ -38,7 +40,16 @@ class PlacesRepo {
                 return
             }
             if let data = data, let entity = NearbyRestaurantsEntity.fromData(data) {
-                self?.latestSearchCache.send(.success(entity))
+                // Store in temp cache for quick access
+                self?.latestSearchCache = entity.results.reduce([String: PlaceEntity]()) { (dictionary, entity) -> [String: PlaceEntity] in
+                    var dictionary = dictionary
+                    if let placeId = entity.placeId {
+                        dictionary[placeId] = entity
+                    }
+                    return dictionary
+                }
+                // Update Observers
+                self?.latestSearchPublisher.send(.success(entity))
                 handler(.success(entity))
             } else {
                 handler(.failure(.dataSourceError))
