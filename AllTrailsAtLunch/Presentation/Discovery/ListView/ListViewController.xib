@@ -4,12 +4,12 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListViewController" customModule="AllTrailsAtLunch" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="eiO-dX-kUd" id="J20-AG-RuX"/>
                 <outlet property="view" destination="iN0-l3-epB" id="dd3-Uy-k0H"/>
             </connections>
         </placeholder>
@@ -17,14 +17,24 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eiO-dX-kUd">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="jhw-z8-FFM"/>
+                        <outlet property="delegate" destination="-1" id="j1G-Ey-fv3"/>
+                    </connections>
+                </tableView>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="eiO-dX-kUd" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="J4I-Xv-d3f"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="eiO-dX-kUd" secondAttribute="trailing" id="JXg-M1-56e"/>
+                <constraint firstItem="eiO-dX-kUd" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="La6-eN-0To"/>
+                <constraint firstAttribute="bottom" secondItem="eiO-dX-kUd" secondAttribute="bottom" id="vKt-A5-hi8"/>
+            </constraints>
             <point key="canvasLocation" x="139" y="154"/>
         </view>
     </objects>
-    <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-    </resources>
 </document>

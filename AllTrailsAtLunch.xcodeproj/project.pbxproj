@@ -13,6 +13,8 @@
 		FECACF6C28367D94005E4ABE /* PlaceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF6B28367D94005E4ABE /* PlaceEntity.swift */; };
 		FECACF70283699B7005E4ABE /* PlaceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF6F283699B7005E4ABE /* PlaceCard.swift */; };
 		FECACF7528369A9B005E4ABE /* PlaceCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FECACF7428369A9B005E4ABE /* PlaceCard.xib */; };
+		FECACF782836B015005E4ABE /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FECACF772836B015005E4ABE /* ListTableViewCell.xib */; };
+		FECACF7A2836B020005E4ABE /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF792836B020005E4ABE /* ListTableViewCell.swift */; };
 		FEF6FACD283057D600CAFC5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FACC283057D600CAFC5E /* AppDelegate.swift */; };
 		FEF6FACF283057D600CAFC5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FACE283057D600CAFC5E /* SceneDelegate.swift */; };
 		FEF6FAD4283057D600CAFC5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF6FAD2283057D600CAFC5E /* Main.storyboard */; };
@@ -58,6 +60,8 @@
 		FECACF6B28367D94005E4ABE /* PlaceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceEntity.swift; sourceTree = "<group>"; };
 		FECACF6F283699B7005E4ABE /* PlaceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCard.swift; sourceTree = "<group>"; };
 		FECACF7428369A9B005E4ABE /* PlaceCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCard.xib; sourceTree = "<group>"; };
+		FECACF772836B015005E4ABE /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
+		FECACF792836B020005E4ABE /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
 		FEF6FAC9283057D600CAFC5E /* AllTrailsAtLunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTrailsAtLunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF6FACC283057D600CAFC5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEF6FACE283057D600CAFC5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -159,6 +163,15 @@
 				FECACF7428369A9B005E4ABE /* PlaceCard.xib */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		FECACF762836B001005E4ABE /* ListViewTableCell */ = {
+			isa = PBXGroup;
+			children = (
+				FECACF772836B015005E4ABE /* ListTableViewCell.xib */,
+				FECACF792836B020005E4ABE /* ListTableViewCell.swift */,
+			);
+			path = ListViewTableCell;
 			sourceTree = "<group>";
 		};
 		FEF6FAC0283057D600CAFC5E = {
@@ -318,6 +331,7 @@
 		FEF6FB1E2835DAC500CAFC5E /* ListView */ = {
 			isa = PBXGroup;
 			children = (
+				FECACF762836B001005E4ABE /* ListViewTableCell */,
 				FEF6FB282836140100CAFC5E /* ListViewController.xib */,
 				FEF6FB2A2836141000CAFC5E /* ListViewController.swift */,
 				FEF6FB2C2836146E00CAFC5E /* ListViewPresenter.swift */,
@@ -399,6 +413,7 @@
 				FEF6FB222836094C00CAFC5E /* MapViewController.xib in Resources */,
 				FEF6FB292836140100CAFC5E /* ListViewController.xib in Resources */,
 				FEF6FAD9283057D700CAFC5E /* LaunchScreen.storyboard in Resources */,
+				FECACF782836B015005E4ABE /* ListTableViewCell.xib in Resources */,
 				FEF6FAD6283057D700CAFC5E /* Assets.xcassets in Resources */,
 				FEF6FAD4283057D600CAFC5E /* Main.storyboard in Resources */,
 				FECACF7528369A9B005E4ABE /* PlaceCard.xib in Resources */,
@@ -489,6 +504,7 @@
 				FEF6FB072835A41C00CAFC5E /* DiscoveryViewPresenter.swift in Sources */,
 				FEF6FB142835ABB000CAFC5E /* TroubleshootPresenter.swift in Sources */,
 				FEF6FB00283576F800CAFC5E /* String+Extension.swift in Sources */,
+				FECACF7A2836B020005E4ABE /* ListTableViewCell.swift in Sources */,
 				FEF6FB192835D26200CAFC5E /* Obfuscator.swift in Sources */,
 				FEF6FB342836297600CAFC5E /* GooglePlacesRestCall.swift in Sources */,
 				FECACF6C28367D94005E4ABE /* PlaceEntity.swift in Sources */,
