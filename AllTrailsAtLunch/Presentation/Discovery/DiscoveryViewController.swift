@@ -11,6 +11,6 @@ class DiscoveryViewController: LayoutReadyViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .red
+        self.view.backgroundColor = .green
     }
 }

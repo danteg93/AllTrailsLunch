@@ -9,7 +9,14 @@ import Foundation
 import Combine
 
 struct ContainerSwitchState {
-  var shouldReroute = false
+    
+    enum SceneToPresent {
+        case troubleshoot
+        case discovery
+        case notDetermined
+    }
+    
+    var sceneToPresent = SceneToPresent.notDetermined
 }
 
 class ContainerSwitchPresenter: Presentable {
@@ -25,17 +32,25 @@ class ContainerSwitchPresenter: Presentable {
     }
     
     func setup() {
-        //print("What \(LocationDataSource.shared.authorizationStatus == .notDetermined)")
-        print("Hello there")
-        self.permissionsSubscription = LocationPermissionsEntity.subscribe(arguments: .none) { result in
+        self.permissionsSubscription = LocationPermissionsEntity.subscribe(arguments: .none) { [weak self] result in
             switch result {
             case .success(let entity):
-                print("We got \(entity.permissionsStatus)")
+                switch entity.permissionsStatus {
+                case .notDetermined:
+                    self?.viewModel.sceneToPresent = .notDetermined
+                case .denied:
+                    self?.viewModel.sceneToPresent = .troubleshoot
+                case .authorized:
+                    self?.viewModel.sceneToPresent = .discovery
+                }
+                self?.display(.populated)
             case .failure:
                 print("error")
             }
         }
-        self.display(.populated)
     }
     
+    func requestLocationPermissions() {
+        _ = RequestLocationPermissionsEntity.syncRequest()
+    }
 }

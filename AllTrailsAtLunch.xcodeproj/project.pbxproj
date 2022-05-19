@@ -29,6 +29,7 @@
 		FEF6FB0F2835AB8B00CAFC5E /* TroubleshootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB0E2835AB8B00CAFC5E /* TroubleshootViewController.swift */; };
 		FEF6FB112835AB9800CAFC5E /* TroubleshootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF6FB102835AB9800CAFC5E /* TroubleshootViewController.xib */; };
 		FEF6FB142835ABB000CAFC5E /* TroubleshootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB132835ABB000CAFC5E /* TroubleshootPresenter.swift */; };
+		FEF6FB162835CA6A00CAFC5E /* RequestLocationPermissionsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB152835CA6A00CAFC5E /* RequestLocationPermissionsEntity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		FEF6FB0E2835AB8B00CAFC5E /* TroubleshootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TroubleshootViewController.swift; sourceTree = "<group>"; };
 		FEF6FB102835AB9800CAFC5E /* TroubleshootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TroubleshootViewController.xib; sourceTree = "<group>"; };
 		FEF6FB132835ABB000CAFC5E /* TroubleshootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TroubleshootPresenter.swift; sourceTree = "<group>"; };
+		FEF6FB152835CA6A00CAFC5E /* RequestLocationPermissionsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLocationPermissionsEntity.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -192,6 +194,7 @@
 			isa = PBXGroup;
 			children = (
 				FEF6FAFA2835756200CAFC5E /* LocationPermissionsEntity.swift */,
+				FEF6FB152835CA6A00CAFC5E /* RequestLocationPermissionsEntity.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEF6FAE3283058AF00CAFC5E /* PesentationProtocols.swift in Sources */,
+				FEF6FB162835CA6A00CAFC5E /* RequestLocationPermissionsEntity.swift in Sources */,
 				FEF6FAE628313E0700CAFC5E /* LayoutReadyViewController.swift in Sources */,
 				FEF6FAEA2832D86000CAFC5E /* ContainerSwitchPresenter.swift in Sources */,
 				FEF6FAE8283167AF00CAFC5E /* ContainerSwitchViewController.swift in Sources */,

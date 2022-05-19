@@ -14,6 +14,10 @@ class LocationManager {
     private let locationDataSource = LocationDataSource.shared
     
     var locationPermissionsPublisher = EntityPublisher.Passthrough<LocationPermissionsEntity>()
+    
+    func requestPermissions() {
+        self.locationDataSource.requestLocationPermissions()
+    }
         
     func observeLocationPermissions() {
         self.locationDataSource.observeLocationPermissionStatus { [weak self] permissionsStatus in

@@ -20,7 +20,6 @@ class LocationDataSource: NSObject {
     override init() {
         super.init()
         self.locationManager.delegate = self
-        self.locationManager.requestWhenInUseAuthorization()
     }
     
     private var authorizationStatus:  CLAuthorizationStatus {
@@ -30,6 +29,10 @@ class LocationDataSource: NSObject {
     func observeLocationPermissionStatus(handler: @escaping LocationPermissionsStateHandler) {
         self.locationPermissionsObserver = handler
         self.locationPermissionsObserver?(self.authorizationStatus)
+    }
+    
+    func requestLocationPermissions() {
+        self.locationManager.requestWhenInUseAuthorization()
     }
 }
 

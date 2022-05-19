@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nis-nZ-hlA">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -15,36 +15,53 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Trails at lunch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vVf-Hu-thZ" userLabel="Title">
+                                <rect key="frame" x="20" y="438.5" width="374" height="29"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <color key="textColor" name="LabelTitle"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wpN-us-9V7" userLabel="Troubleshoot Container">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </containerView>
+                            <containerView opaque="NO" alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kBo-1b-AHo" userLabel="Discovery Container">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </containerView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" name="AppBackground"/>
+                        <constraints>
+                            <constraint firstItem="wpN-us-9V7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1fx-08-h9q"/>
+                            <constraint firstItem="vVf-Hu-thZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="4cM-SL-AYg"/>
+                            <constraint firstItem="kBo-1b-AHo" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="GD5-HD-OFZ"/>
+                            <constraint firstItem="wpN-us-9V7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="TO3-Cu-NFf"/>
+                            <constraint firstItem="kBo-1b-AHo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Y6a-6i-PoO"/>
+                            <constraint firstItem="wpN-us-9V7" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="b3U-AF-dO4"/>
+                            <constraint firstItem="kBo-1b-AHo" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="bKu-0k-xaW"/>
+                            <constraint firstItem="vVf-Hu-thZ" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="bN6-XH-Vhy"/>
+                            <constraint firstItem="wpN-us-9V7" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" id="g4S-si-GOr"/>
+                            <constraint firstItem="kBo-1b-AHo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="o3k-ze-JC6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="vVf-Hu-thZ" secondAttribute="trailing" constant="20" id="rs2-Qb-DQP"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ghU-0F-IEj"/>
+                    <connections>
+                        <outlet property="discoveryContainer" destination="kBo-1b-AHo" id="Fh1-ar-ciR"/>
+                        <outlet property="troubleshootContainer" destination="wpN-us-9V7" id="MnK-fB-2LA"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="607" y="446"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="kuT-St-Y1Q">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="nis-nZ-hlA" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="KXM-VP-4m0">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="wad-Lf-1BX"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="3y4-GB-uy3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-190" y="446"/>
-        </scene>
     </scenes>
     <resources>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
+        <namedColor name="AppBackground">
+            <color red="0.97254901960784312" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LabelTitle">
+            <color red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>
