@@ -42,7 +42,7 @@ class ListViewTableCell: UITableViewCell {
             self.titleLabel.text = model.title
             self.supportLabel.text = model.supportText
             for imageIndex in 0..<5 {
-                self.starImageCollection[imageIndex].tintColor = Double(imageIndex) < model.rating ? .orange : .lightGray
+                self.starImageCollection[imageIndex].tintColor = Double(imageIndex) < model.rating.rounded() ? .orange : .lightGray
             }
         }
     }

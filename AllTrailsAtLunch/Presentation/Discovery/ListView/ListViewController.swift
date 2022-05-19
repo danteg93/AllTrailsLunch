@@ -70,9 +70,27 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.listCellIdentifier, for: indexPath)
         cell.selectionStyle = .none
         if let listCell = cell as? ListViewTableCell, let place = self.presenter?.viewModel.places[indexPath.row] {
+            // Prepare Support Text
+            var supportText = ""
+            if let priceLevel = place.priceLevel {
+                if priceLevel == 0 {
+                    supportText.append("Free")
+                } else {
+                    for _ in 0 ..< priceLevel {
+                        supportText.append("$")
+                    }
+                }
+            }
+            if let vicinity = place.vicinity {
+                if supportText.count != 0 {
+                    supportText.append(" • ")
+                }
+                supportText.append(vicinity)
+            }
+            // Create Model and setup
             let model = ListViewTableCellModel(title: place.name ?? "",
                                                rating: place.rating ?? 0,
-                                               supportText: "$$ • Supporting Text")
+                                               supportText: supportText)
             listCell.setup(model: model)
         }
         return cell
