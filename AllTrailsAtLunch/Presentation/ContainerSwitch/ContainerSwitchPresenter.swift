@@ -31,7 +31,7 @@ class ContainerSwitchPresenter: Presentable {
         self.display = display
     }
     
-    func setup() {
+    func setup() { 
         self.permissionsSubscription = LocationPermissionsEntity.subscribe(arguments: .none) { [weak self] result in
             switch result {
             case .success(let entity):

@@ -30,6 +30,12 @@
 		FEF6FB112835AB9800CAFC5E /* TroubleshootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF6FB102835AB9800CAFC5E /* TroubleshootViewController.xib */; };
 		FEF6FB142835ABB000CAFC5E /* TroubleshootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB132835ABB000CAFC5E /* TroubleshootPresenter.swift */; };
 		FEF6FB162835CA6A00CAFC5E /* RequestLocationPermissionsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB152835CA6A00CAFC5E /* RequestLocationPermissionsEntity.swift */; };
+		FEF6FB192835D26200CAFC5E /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB182835D26200CAFC5E /* Obfuscator.swift */; };
+		FEF6FB1B2835D34E00CAFC5E /* GooglePlacesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB1A2835D34E00CAFC5E /* GooglePlacesDataSource.swift */; };
+		FEF6FB202836079800CAFC5E /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB1F2836079800CAFC5E /* UIButton+Extension.swift */; };
+		FEF6FB222836094C00CAFC5E /* MapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF6FB212836094C00CAFC5E /* MapViewController.xib */; };
+		FEF6FB252836095F00CAFC5E /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB242836095F00CAFC5E /* MapViewController.swift */; };
+		FEF6FB272836099F00CAFC5E /* MapPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB262836099F00CAFC5E /* MapPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +66,12 @@
 		FEF6FB102835AB9800CAFC5E /* TroubleshootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TroubleshootViewController.xib; sourceTree = "<group>"; };
 		FEF6FB132835ABB000CAFC5E /* TroubleshootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TroubleshootPresenter.swift; sourceTree = "<group>"; };
 		FEF6FB152835CA6A00CAFC5E /* RequestLocationPermissionsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLocationPermissionsEntity.swift; sourceTree = "<group>"; };
+		FEF6FB182835D26200CAFC5E /* Obfuscator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obfuscator.swift; sourceTree = "<group>"; };
+		FEF6FB1A2835D34E00CAFC5E /* GooglePlacesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesDataSource.swift; sourceTree = "<group>"; };
+		FEF6FB1F2836079800CAFC5E /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		FEF6FB212836094C00CAFC5E /* MapViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MapViewController.xib; sourceTree = "<group>"; };
+		FEF6FB242836095F00CAFC5E /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		FEF6FB262836099F00CAFC5E /* MapPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,6 +181,7 @@
 			isa = PBXGroup;
 			children = (
 				FEF6FAF42834588B00CAFC5E /* LocationDataSource.swift */,
+				FEF6FB1A2835D34E00CAFC5E /* GooglePlacesDataSource.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -203,6 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				FEF6FAFF283576F800CAFC5E /* String+Extension.swift */,
+				FEF6FB182835D26200CAFC5E /* Obfuscator.swift */,
+				FEF6FB1F2836079800CAFC5E /* UIButton+Extension.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -210,6 +225,8 @@
 		FEF6FB012835A3E800CAFC5E /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
+				FEF6FB1E2835DAC500CAFC5E /* ListView */,
+				FEF6FB1C2835DAB700CAFC5E /* MapView */,
 				FEF6FB022835A3F900CAFC5E /* DiscoveryViewController.swift */,
 				FEF6FB062835A41C00CAFC5E /* DiscoveryPresenter.swift */,
 				FEF6FB042835A40600CAFC5E /* DiscoveryViewController.xib */,
@@ -225,6 +242,23 @@
 				FEF6FB102835AB9800CAFC5E /* TroubleshootViewController.xib */,
 			);
 			path = Troubleshoot;
+			sourceTree = "<group>";
+		};
+		FEF6FB1C2835DAB700CAFC5E /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				FEF6FB242836095F00CAFC5E /* MapViewController.swift */,
+				FEF6FB262836099F00CAFC5E /* MapPresenter.swift */,
+				FEF6FB212836094C00CAFC5E /* MapViewController.xib */,
+			);
+			path = MapView;
+			sourceTree = "<group>";
+		};
+		FEF6FB1E2835DAC500CAFC5E /* ListView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ListView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -288,6 +322,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEF6FB112835AB9800CAFC5E /* TroubleshootViewController.xib in Resources */,
+				FEF6FB222836094C00CAFC5E /* MapViewController.xib in Resources */,
 				FEF6FAD9283057D700CAFC5E /* LaunchScreen.storyboard in Resources */,
 				FEF6FAD6283057D700CAFC5E /* Assets.xcassets in Resources */,
 				FEF6FAD4283057D600CAFC5E /* Main.storyboard in Resources */,
@@ -347,14 +382,19 @@
 				FEF6FAE3283058AF00CAFC5E /* PesentationProtocols.swift in Sources */,
 				FEF6FB162835CA6A00CAFC5E /* RequestLocationPermissionsEntity.swift in Sources */,
 				FEF6FAE628313E0700CAFC5E /* LayoutReadyViewController.swift in Sources */,
+				FEF6FB272836099F00CAFC5E /* MapPresenter.swift in Sources */,
 				FEF6FAEA2832D86000CAFC5E /* ContainerSwitchPresenter.swift in Sources */,
 				FEF6FAE8283167AF00CAFC5E /* ContainerSwitchViewController.swift in Sources */,
+				FEF6FB1B2835D34E00CAFC5E /* GooglePlacesDataSource.swift in Sources */,
 				FEF6FAFB2835756200CAFC5E /* LocationPermissionsEntity.swift in Sources */,
 				FEF6FAF52834588B00CAFC5E /* LocationDataSource.swift in Sources */,
 				FEF6FAFD283575C300CAFC5E /* DomainErrors.swift in Sources */,
 				FEF6FB072835A41C00CAFC5E /* DiscoveryPresenter.swift in Sources */,
 				FEF6FB142835ABB000CAFC5E /* TroubleshootPresenter.swift in Sources */,
 				FEF6FB00283576F800CAFC5E /* String+Extension.swift in Sources */,
+				FEF6FB192835D26200CAFC5E /* Obfuscator.swift in Sources */,
+				FEF6FB252836095F00CAFC5E /* MapViewController.swift in Sources */,
+				FEF6FB202836079800CAFC5E /* UIButton+Extension.swift in Sources */,
 				FEF6FAF22834501D00CAFC5E /* DomainProtocols.swift in Sources */,
 				FEF6FACD283057D600CAFC5E /* AppDelegate.swift in Sources */,
 				FEF6FB032835A3F900CAFC5E /* DiscoveryViewController.swift in Sources */,
@@ -517,6 +557,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -549,6 +590,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
