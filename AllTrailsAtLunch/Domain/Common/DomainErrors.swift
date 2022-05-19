@@ -8,17 +8,28 @@
 import Foundation
 
 protocol LocalizedDomainError: Error {
-  var localizedDescription: String { get }
+    var localizedDescription: String { get }
 }
 
 
 enum LocationError: LocalizedDomainError {
-  case domainError
-  
-  var localizedDescription: String {
-    switch self {
-      case .domainError:
-        return "Something went wrong, please try again".localized
+    case domainError
+    
+    var localizedDescription: String {
+        switch self {
+        case .domainError:
+            return "Something went wrong, please try again".localized
+        }
     }
-  }
+}
+
+enum PlacesError: LocalizedDomainError {
+    case dataSourceError
+    
+    var localizedDescription: String {
+        switch self {
+        case .dataSourceError:
+            return "Server unreachable, please try again later".localized
+        }
+    }
 }

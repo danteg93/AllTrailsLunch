@@ -9,11 +9,13 @@ import Foundation
 
 class LocationManager {
     
-    private init() {}
-    static let shared = LocationManager()
     private let locationDataSource = LocationDataSource.shared
     
     var locationPermissionsPublisher = EntityPublisher.Passthrough<LocationPermissionsEntity>()
+    
+    private init() {}
+    static let shared = LocationManager()
+    
     
     func requestPermissions() {
         self.locationDataSource.requestLocationPermissions()

@@ -92,6 +92,7 @@ class DiscoveryViewController: LayoutReadyViewController, Displayable {
                 self.modeSwitchButton.setImage(Constants.listImage, for: .normal)
                 self.modeSwitchButton.setTitle(Constants.listButtonTitle, for: .normal)
             }
+            self.modeSwitchButton.alpha = 1.0
         }
     }
     

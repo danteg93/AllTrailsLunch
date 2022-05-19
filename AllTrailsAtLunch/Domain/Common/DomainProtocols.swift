@@ -52,12 +52,6 @@ protocol ObservableEntity {
     static func subscribe(arguments: Arguments?, updateHandler: @escaping ResultHandler) -> AnyCancellable?
 }
 
-// MARK: - Publisher Aliases, used by Observable Entities.
-enum EntityPublisher {
-    typealias Passthrough<Entity: ObservableEntity> = PassthroughSubject<Entity.EntityResult, Error>
-    typealias Cached<Entity: ObservableEntity> = CurrentValueSubject<Entity.EntityResult, Error>
-}
-
 /// Use case to create, update or delete a cached entity
 protocol MutableLocalEntity {
     associatedtype DomainError: Error
@@ -95,4 +89,27 @@ protocol EntityBundle {
     /// Expected output from this bundle. Usually an enum listing the entities ran and their results.
     associatedtype BundleOutput
     func execute(arguments: Arguments?, handler: @escaping (BundleOutput) -> Void)
+}
+
+// MARK: - Publisher Aliases, used by Observable Entities.
+enum EntityPublisher {
+    typealias Passthrough<Entity: ObservableEntity> = PassthroughSubject<Entity.EntityResult, Error>
+    typealias Cached<Entity: ObservableEntity> = CurrentValueSubject<Entity.EntityResult, Error>
+}
+
+// MARK: - Data Decodable Entities
+protocol DataDecodableEntity: Decodable {
+  static func fromData(_ data: Data) -> Self?
+}
+
+extension DataDecodableEntity {
+  static func fromData(_ data: Data) -> Self? {
+    do {
+      let entity = try JSONDecoder().decode(Self.self, from: data)
+      return entity
+    } catch {
+      print("[\(String(describing: Self.self))] failed to parse entity because of: \(error)")
+      return nil
+    }
+  }
 }

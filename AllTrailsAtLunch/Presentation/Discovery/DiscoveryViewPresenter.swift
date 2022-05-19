@@ -28,6 +28,10 @@ class DiscoveryViewPresenter: Presentable {
     
     func setup() {
         self.display(.populated)
+        let arguments = NearbyRestaurantsArguments(keyword: nil)
+        // Will trigger a search, which will update the cache.
+        // Observers to the cache will be updated with the latest search results
+        NearbyRestaurantsEntity.asyncRequest(arguments: arguments) { _ in }
     }
     
     /// Used to inform the State that the active mode has been updated to the desired mode, will not trigger a display update
@@ -38,5 +42,12 @@ class DiscoveryViewPresenter: Presentable {
     func updateDesiredMode(_ mode: State.DiscoveryMode) {
         self.viewModel.desiredMode = mode
         self.display(.populated)
+    }
+    
+    func searchNearbyPlaces(_ keyword: String?) {
+        let arguments = NearbyRestaurantsArguments(keyword: keyword)
+        // Will trigger a search, which will update the cache.
+        // Observers to the cache will be updated with the latest search results
+        NearbyRestaurantsEntity.asyncRequest(arguments: arguments) { _ in }
     }
 }
