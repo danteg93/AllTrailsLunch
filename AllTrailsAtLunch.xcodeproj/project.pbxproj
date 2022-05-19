@@ -15,6 +15,9 @@
 		FECACF812836DB69005E4ABE /* ListViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF802836DB69005E4ABE /* ListViewTableCell.swift */; };
 		FECACF852836E53C005E4ABE /* PlaceDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FECACF842836E53C005E4ABE /* PlaceDetailViewController.xib */; };
 		FECACF882836E55C005E4ABE /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF872836E55C005E4ABE /* PlaceDetailViewController.swift */; };
+		FECACF8A2836EF43005E4ABE /* SelectPlaceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF892836EF43005E4ABE /* SelectPlaceEntity.swift */; };
+		FECACF8C2836F074005E4ABE /* GetSelectedPlaceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF8B2836F074005E4ABE /* GetSelectedPlaceEntity.swift */; };
+		FECACF8E2836F47E005E4ABE /* PlaceDetailViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF8D2836F47E005E4ABE /* PlaceDetailViewPresenter.swift */; };
 		FEF6FACD283057D600CAFC5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FACC283057D600CAFC5E /* AppDelegate.swift */; };
 		FEF6FACF283057D600CAFC5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FACE283057D600CAFC5E /* SceneDelegate.swift */; };
 		FEF6FAD4283057D600CAFC5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF6FAD2283057D600CAFC5E /* Main.storyboard */; };
@@ -61,6 +64,9 @@
 		FECACF802836DB69005E4ABE /* ListViewTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTableCell.swift; sourceTree = "<group>"; };
 		FECACF842836E53C005E4ABE /* PlaceDetailViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceDetailViewController.xib; sourceTree = "<group>"; };
 		FECACF872836E55C005E4ABE /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
+		FECACF892836EF43005E4ABE /* SelectPlaceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectPlaceEntity.swift; sourceTree = "<group>"; };
+		FECACF8B2836F074005E4ABE /* GetSelectedPlaceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSelectedPlaceEntity.swift; sourceTree = "<group>"; };
+		FECACF8D2836F47E005E4ABE /* PlaceDetailViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewPresenter.swift; sourceTree = "<group>"; };
 		FEF6FAC9283057D600CAFC5E /* AllTrailsAtLunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTrailsAtLunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF6FACC283057D600CAFC5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEF6FACE283057D600CAFC5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -148,8 +154,10 @@
 		FECACF6A28367D7E005E4ABE /* Places */ = {
 			isa = PBXGroup;
 			children = (
-				FECACF64283675FE005E4ABE /* NearbyRestaurantsEntity.swift */,
 				FECACF6B28367D94005E4ABE /* PlaceEntity.swift */,
+				FECACF64283675FE005E4ABE /* NearbyRestaurantsEntity.swift */,
+				FECACF892836EF43005E4ABE /* SelectPlaceEntity.swift */,
+				FECACF8B2836F074005E4ABE /* GetSelectedPlaceEntity.swift */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -168,6 +176,7 @@
 			children = (
 				FECACF842836E53C005E4ABE /* PlaceDetailViewController.xib */,
 				FECACF872836E55C005E4ABE /* PlaceDetailViewController.swift */,
+				FECACF8D2836F47E005E4ABE /* PlaceDetailViewPresenter.swift */,
 			);
 			path = PlaceDetail;
 			sourceTree = "<group>";
@@ -504,16 +513,19 @@
 				FECACF6C28367D94005E4ABE /* PlaceEntity.swift in Sources */,
 				FEF6FB252836095F00CAFC5E /* MapViewController.swift in Sources */,
 				FECACF812836DB69005E4ABE /* ListViewTableCell.swift in Sources */,
+				FECACF8A2836EF43005E4ABE /* SelectPlaceEntity.swift in Sources */,
 				FEF6FB312836284900CAFC5E /* RestTransportManager.swift in Sources */,
 				FEF6FB2B2836141000CAFC5E /* ListViewController.swift in Sources */,
 				FECACF882836E55C005E4ABE /* PlaceDetailViewController.swift in Sources */,
 				FEF6FB202836079800CAFC5E /* UIButton+Extension.swift in Sources */,
 				FEF6FAF22834501D00CAFC5E /* DomainProtocols.swift in Sources */,
 				FEF6FACD283057D600CAFC5E /* AppDelegate.swift in Sources */,
+				FECACF8C2836F074005E4ABE /* GetSelectedPlaceEntity.swift in Sources */,
 				FEF6FB032835A3F900CAFC5E /* DiscoveryViewController.swift in Sources */,
 				FEF6FB0F2835AB8B00CAFC5E /* TroubleshootViewController.swift in Sources */,
 				FEF6FACF283057D600CAFC5E /* SceneDelegate.swift in Sources */,
 				FECACF65283675FE005E4ABE /* NearbyRestaurantsEntity.swift in Sources */,
+				FECACF8E2836F47E005E4ABE /* PlaceDetailViewPresenter.swift in Sources */,
 				FEF6FAF8283459B800CAFC5E /* LocationManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

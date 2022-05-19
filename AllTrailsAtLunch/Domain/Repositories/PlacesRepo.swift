@@ -13,13 +13,10 @@ class PlacesRepo {
     private let placesDataSource = GooglePlacesDataSource.shared
     private let locationDataSource = LocationDataSource.shared
     
-    //private var latestSearchCache: [PlaceEntity] = []
-    
-    //var locationPermissionsPublisher = EntityPublisher.Passthrough<NearbyRestaurantsEntity>()
-    
     var latestSearchPublisher = EntityPublisher.Cached<NearbyRestaurantsEntity>(.success(NearbyRestaurantsEntity(results: [])))
     
     private var latestSearchCache: [String: PlaceEntity] = [:]
+    private var userSelectedPlaceId: String? = nil
     
     private init() {}
     static let shared = PlacesRepo()
@@ -55,6 +52,17 @@ class PlacesRepo {
                 handler(.failure(.dataSourceError))
             }
         }
+    }
+    
+    func setSelectedPlace(arguments: SelectPlaceEntity.Arguments) {
+        self.userSelectedPlaceId = arguments.placeId
+    }
+    
+    func getSelectedPlace() -> PlaceEntity? {
+        guard let userSelectedPlaceId = userSelectedPlaceId else {
+            return nil
+        }
+        return latestSearchCache[userSelectedPlaceId]
     }
     
 }

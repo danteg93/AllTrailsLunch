@@ -11,6 +11,7 @@ struct DiscoveryState {
     enum DiscoveryMode {
         case map
         case list
+        case detail
     }
     
     var activeMode: DiscoveryMode?
@@ -49,5 +50,12 @@ class DiscoveryViewPresenter: Presentable {
         // Will trigger a search, which will update the cache.
         // Observers to the cache will be updated with the latest search results
         NearbyRestaurantsEntity.asyncRequest(arguments: arguments) { _ in }
+    }
+    
+    func setSelectedPlace(placeId: String) {
+        let arguments = SelectPlaceArguments(placeId: placeId)
+        _ = SelectPlaceEntity.syncRequest(arguments: arguments)
+        self.viewModel.desiredMode = .detail
+        self.display(.populated)
     }
 }

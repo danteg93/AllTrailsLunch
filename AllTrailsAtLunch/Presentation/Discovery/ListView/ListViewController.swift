@@ -71,7 +71,8 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         cell.selectionStyle = .none
         if let listCell = cell as? ListViewTableCell, let place = self.presenter?.viewModel.places[indexPath.row] {
             let model = ListViewTableCellModel(title: place.name ?? "",
-                                               placeId: place.placeId ?? "")
+                                               rating: place.rating ?? 0,
+                                               supportText: "$$ • Supporting Text")
             listCell.setup(model: model)
         }
         return cell

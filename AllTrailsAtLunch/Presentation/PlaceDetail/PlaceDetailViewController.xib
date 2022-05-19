@@ -3,13 +3,14 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaceDetailViewController" customModule="AllTrailsAtLunch" customModuleProvider="target">
             <connections>
+                <outlet property="titleLabel" destination="v8K-Dm-BDw" id="UDU-Uy-IR7"/>
                 <outlet property="view" destination="iN0-l3-epB" id="C9y-oa-45i"/>
             </connections>
         </placeholder>
@@ -17,14 +18,37 @@
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultImage" translatesAutoresizingMaskIntoConstraints="NO" id="xom-Vh-dKQ">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="233"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="xom-Vh-dKQ" secondAttribute="height" multiplier="16:9" id="y6U-qX-bUX"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8K-Dm-BDw">
+                    <rect key="frame" x="20" y="213" width="374" height="0.0"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemOrangeColor"/>
-            <point key="canvasLocation" x="139" y="139"/>
+            <color key="backgroundColor" name="AppBackground"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="v8K-Dm-BDw" secondAttribute="trailing" constant="20" id="FgD-4t-7oi"/>
+                <constraint firstItem="xom-Vh-dKQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="I4m-t7-rrA"/>
+                <constraint firstItem="xom-Vh-dKQ" firstAttribute="bottom" secondItem="v8K-Dm-BDw" secondAttribute="bottom" constant="20" id="YQY-pE-tnj"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xom-Vh-dKQ" secondAttribute="trailing" id="Zxe-hN-LKU"/>
+                <constraint firstItem="xom-Vh-dKQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mvF-qT-0Wl"/>
+                <constraint firstItem="v8K-Dm-BDw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="vYo-cW-uDl"/>
+            </constraints>
+            <point key="canvasLocation" x="41" y="116"/>
         </view>
     </objects>
     <resources>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
+        <image name="defaultImage" width="2048" height="1536"/>
+        <namedColor name="AppBackground">
+            <color red="0.97254901960784312" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
     </resources>
 </document>

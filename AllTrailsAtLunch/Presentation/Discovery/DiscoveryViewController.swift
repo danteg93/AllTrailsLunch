@@ -84,6 +84,8 @@ class DiscoveryViewController: LayoutReadyViewController, Displayable {
                 self.listViewController?.delegate = self
             }
             selectedViewController = self.listViewController
+        case .detail:
+            self.showPlaceDetail()
         }
         
         if let selectedViewController = selectedViewController {
@@ -101,17 +103,10 @@ class DiscoveryViewController: LayoutReadyViewController, Displayable {
             case .map:
                 self.modeSwitchButton.setImage(Constants.listImage, for: .normal)
                 self.modeSwitchButton.setTitle(Constants.listButtonTitle, for: .normal)
+            case .detail:
+                return
             }
             self.modeSwitchButton.alpha = 1.0
-        }
-    }
-    
-    private func showPlaceDetail() {
-        DispatchQueue.main.async {
-            let navController = UINavigationController(rootViewController: PlaceDetailViewController())
-            navController.setNavigationBarHidden(true, animated: false)
-            navController.modalPresentationStyle = .pageSheet
-            self.present(navController, animated: true, completion: nil)
         }
     }
     
@@ -122,6 +117,8 @@ class DiscoveryViewController: LayoutReadyViewController, Displayable {
             self.presenter?.updateDesiredMode(.list)
         case .list:
             self.presenter?.updateDesiredMode(.map)
+        case .detail:
+            return
         }
     }
     
@@ -149,6 +146,8 @@ extension DiscoveryViewController {
             activeViewController = self.mapViewController
         case .list:
             activeViewController = self.listViewController
+        case .detail:
+            return
         }
         if let activeViewController = activeViewController {
             DispatchQueue.main.async {
@@ -156,6 +155,15 @@ extension DiscoveryViewController {
                 activeViewController.view.removeFromSuperview()
                 activeViewController.removeFromParent()
             }
+        }
+    }
+    
+    private func showPlaceDetail() {
+        DispatchQueue.main.async {
+            let navController = UINavigationController(rootViewController: PlaceDetailViewController())
+            navController.setNavigationBarHidden(true, animated: false)
+            navController.modalPresentationStyle = .pageSheet
+            self.present(navController, animated: true, completion: nil)
         }
     }
     
@@ -173,6 +181,6 @@ extension DiscoveryViewController: UISearchBarDelegate {
 
 extension DiscoveryViewController: ListViewControllerDelegate {
     func placeTapped(placeIdSelected: String) {
-        self.showPlaceDetail()
+        self.presenter?.setSelectedPlace(placeId: placeIdSelected)
     }
 }

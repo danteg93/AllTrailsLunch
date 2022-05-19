@@ -10,14 +10,20 @@ import UIKit
 
 struct ListViewTableCellModel {
     let title: String
-    let placeId: String
+    let rating: Double
+    let supportText: String
 }
 
 class ListViewTableCell: UITableViewCell {
     
     @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var supportLabel: UILabel!
     
-    private(set) public var model: ListViewTableCellModel?
+    @IBOutlet var starImageCollection: [UIImageView]!
+    
+    override class func awakeFromNib() {
+        super.awakeFromNib()
+    }
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -33,8 +39,11 @@ class ListViewTableCell: UITableViewCell {
     
     func setup(model: ListViewTableCellModel) {
         DispatchQueue.main.async {
-            self.model = model
             self.titleLabel.text = model.title
+            self.supportLabel.text = model.supportText
+            for imageIndex in 0..<5 {
+                self.starImageCollection[imageIndex].tintColor = Double(imageIndex) < model.rating ? .orange : .lightGray
+            }
         }
     }
     
