@@ -21,6 +21,7 @@ class DiscoveryViewController: LayoutReadyViewController, Displayable {
     
     @IBOutlet private weak var viewContainer: UIView!
     @IBOutlet private weak var modeSwitchButton: UIButton!
+    @IBOutlet private weak var searchBar: UISearchBar!
     
     private var mapViewController: MapViewController?
     private var listViewController: ListViewController?
@@ -32,6 +33,14 @@ class DiscoveryViewController: LayoutReadyViewController, Displayable {
         self.createPresenter()
         self.modeSwitchButton.titleLabel?.font = UIFont.systemFont(ofSize: 20, weight: .semibold)
         self.modeSwitchButton.alignTextAndImage(spacing: 10)
+        self.searchBar.searchTextField.leftView?.tintColor = UIColor(named: "ActionBackground")
+        
+        searchBar.barTintColor = UIColor.clear
+        searchBar.backgroundColor = UIColor.clear
+        searchBar.isTranslucent = true
+        searchBar.setBackgroundImage(UIImage(), for: .any, barMetrics: .default)
+        
+        self.searchBar.delegate = self
     }
     
     override func viewIsReady() {
@@ -137,6 +146,16 @@ extension DiscoveryViewController {
                 activeViewController.view.removeFromSuperview()
                 activeViewController.removeFromParent()
             }
+        }
+    }
+    
+}
+
+extension DiscoveryViewController: UISearchBarDelegate {
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+        searchBar.endEditing(true)
+        if let searchText = searchBar.text {
+            self.presenter?.searchNearbyPlaces(searchText)
         }
     }
     

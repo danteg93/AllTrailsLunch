@@ -14,7 +14,7 @@ class ListViewController: LayoutReadyViewController, Displayable {
     typealias Presenter = ListViewPresenter
     
     enum Constants {
-        static let listCellIdentifier = "ListTableViewCell"
+        static let listCellIdentifier = "ListViewTableCell"
         static let tableBottomInset: CGFloat = 85.0
         static let cellHeight: CGFloat = 150.0
     }
@@ -26,6 +26,7 @@ class ListViewController: LayoutReadyViewController, Displayable {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.createPresenter()
+        self.tableView.keyboardDismissMode = .onDrag
         self.tableView.register(UINib(nibName: Constants.listCellIdentifier, bundle: nil), forCellReuseIdentifier: Constants.listCellIdentifier)
     }
     
@@ -61,9 +62,9 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.listCellIdentifier, for: indexPath)
-        if let listCell = cell as? ListTableViewCell, let place = self.presenter?.viewModel.places[indexPath.row] {
-            let model = PlaceCardModel(titleLabel: place.name ?? "")
-            listCell.setup(model)
+        if let listCell = cell as? ListViewTableCell, let place = self.presenter?.viewModel.places[indexPath.row] {
+            let model = ListViewTableCellModel(title: place.name ?? "")
+            listCell.setup(model: model)
         }
         return cell
     }

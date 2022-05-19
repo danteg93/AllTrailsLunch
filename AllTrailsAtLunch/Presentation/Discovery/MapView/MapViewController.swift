@@ -69,6 +69,7 @@ class MapViewController: LayoutReadyViewController, Displayable {
                 guard let location = place.geometry?.location else { continue }
                 let postition = CLLocationCoordinate2D(latitude: location.lat, longitude: location.lng)
                 let marker = GMSMarker(position: postition)
+                marker.icon = GMSMarker.markerImage(with: UIColor(named: "ActionBackground"))
                 marker.title = place.name
                 marker.map = mapView
             }
@@ -85,6 +86,7 @@ class MapViewController: LayoutReadyViewController, Displayable {
                                                   zoom: 13.0)
             let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
             self.mapView = mapView
+            self.mapView?.delegate = self
             self.view.addSubview(mapView)
             self.updateMap()
         }
@@ -92,6 +94,18 @@ class MapViewController: LayoutReadyViewController, Displayable {
     
     deinit {
         self.placesSub?.cancel()
+    }
+}
+
+extension MapViewController: GMSMapViewDelegate {
+    
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        print("Touched marker with \(marker.position)")
+        return false
+    }
+    
+    func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
+        print("TOuched info window of: \(marker.title)")
     }
     
 }

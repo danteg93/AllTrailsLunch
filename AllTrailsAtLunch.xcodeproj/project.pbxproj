@@ -11,10 +11,8 @@
 		FECACF65283675FE005E4ABE /* NearbyRestaurantsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF64283675FE005E4ABE /* NearbyRestaurantsEntity.swift */; };
 		FECACF6828367A97005E4ABE /* PlacesRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF6728367A97005E4ABE /* PlacesRepo.swift */; };
 		FECACF6C28367D94005E4ABE /* PlaceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF6B28367D94005E4ABE /* PlaceEntity.swift */; };
-		FECACF70283699B7005E4ABE /* PlaceCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF6F283699B7005E4ABE /* PlaceCard.swift */; };
-		FECACF7528369A9B005E4ABE /* PlaceCard.xib in Resources */ = {isa = PBXBuildFile; fileRef = FECACF7428369A9B005E4ABE /* PlaceCard.xib */; };
-		FECACF782836B015005E4ABE /* ListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FECACF772836B015005E4ABE /* ListTableViewCell.xib */; };
-		FECACF7A2836B020005E4ABE /* ListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF792836B020005E4ABE /* ListTableViewCell.swift */; };
+		FECACF7D2836D55A005E4ABE /* ListViewTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FECACF7C2836D55A005E4ABE /* ListViewTableCell.xib */; };
+		FECACF812836DB69005E4ABE /* ListViewTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF802836DB69005E4ABE /* ListViewTableCell.swift */; };
 		FEF6FACD283057D600CAFC5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FACC283057D600CAFC5E /* AppDelegate.swift */; };
 		FEF6FACF283057D600CAFC5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FACE283057D600CAFC5E /* SceneDelegate.swift */; };
 		FEF6FAD4283057D600CAFC5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FEF6FAD2283057D600CAFC5E /* Main.storyboard */; };
@@ -35,7 +33,6 @@
 		FEF6FB072835A41C00CAFC5E /* DiscoveryViewPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB062835A41C00CAFC5E /* DiscoveryViewPresenter.swift */; };
 		FEF6FB0F2835AB8B00CAFC5E /* TroubleshootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB0E2835AB8B00CAFC5E /* TroubleshootViewController.swift */; };
 		FEF6FB112835AB9800CAFC5E /* TroubleshootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEF6FB102835AB9800CAFC5E /* TroubleshootViewController.xib */; };
-		FEF6FB142835ABB000CAFC5E /* TroubleshootPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB132835ABB000CAFC5E /* TroubleshootPresenter.swift */; };
 		FEF6FB162835CA6A00CAFC5E /* RequestLocationPermissionsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB152835CA6A00CAFC5E /* RequestLocationPermissionsEntity.swift */; };
 		FEF6FB192835D26200CAFC5E /* Obfuscator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB182835D26200CAFC5E /* Obfuscator.swift */; };
 		FEF6FB1B2835D34E00CAFC5E /* GooglePlacesDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEF6FB1A2835D34E00CAFC5E /* GooglePlacesDataSource.swift */; };
@@ -58,10 +55,8 @@
 		FECACF64283675FE005E4ABE /* NearbyRestaurantsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyRestaurantsEntity.swift; sourceTree = "<group>"; };
 		FECACF6728367A97005E4ABE /* PlacesRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRepo.swift; sourceTree = "<group>"; };
 		FECACF6B28367D94005E4ABE /* PlaceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceEntity.swift; sourceTree = "<group>"; };
-		FECACF6F283699B7005E4ABE /* PlaceCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceCard.swift; sourceTree = "<group>"; };
-		FECACF7428369A9B005E4ABE /* PlaceCard.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlaceCard.xib; sourceTree = "<group>"; };
-		FECACF772836B015005E4ABE /* ListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListTableViewCell.xib; sourceTree = "<group>"; };
-		FECACF792836B020005E4ABE /* ListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListTableViewCell.swift; sourceTree = "<group>"; };
+		FECACF7C2836D55A005E4ABE /* ListViewTableCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ListViewTableCell.xib; sourceTree = "<group>"; };
+		FECACF802836DB69005E4ABE /* ListViewTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewTableCell.swift; sourceTree = "<group>"; };
 		FEF6FAC9283057D600CAFC5E /* AllTrailsAtLunch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AllTrailsAtLunch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEF6FACC283057D600CAFC5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEF6FACE283057D600CAFC5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -84,7 +79,6 @@
 		FEF6FB062835A41C00CAFC5E /* DiscoveryViewPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryViewPresenter.swift; sourceTree = "<group>"; };
 		FEF6FB0E2835AB8B00CAFC5E /* TroubleshootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TroubleshootViewController.swift; sourceTree = "<group>"; };
 		FEF6FB102835AB9800CAFC5E /* TroubleshootViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TroubleshootViewController.xib; sourceTree = "<group>"; };
-		FEF6FB132835ABB000CAFC5E /* TroubleshootPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TroubleshootPresenter.swift; sourceTree = "<group>"; };
 		FEF6FB152835CA6A00CAFC5E /* RequestLocationPermissionsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestLocationPermissionsEntity.swift; sourceTree = "<group>"; };
 		FEF6FB182835D26200CAFC5E /* Obfuscator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Obfuscator.swift; sourceTree = "<group>"; };
 		FEF6FB1A2835D34E00CAFC5E /* GooglePlacesDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GooglePlacesDataSource.swift; sourceTree = "<group>"; };
@@ -156,20 +150,11 @@
 			path = Places;
 			sourceTree = "<group>";
 		};
-		FECACF6E283699A8005E4ABE /* Common */ = {
-			isa = PBXGroup;
-			children = (
-				FECACF6F283699B7005E4ABE /* PlaceCard.swift */,
-				FECACF7428369A9B005E4ABE /* PlaceCard.xib */,
-			);
-			path = Common;
-			sourceTree = "<group>";
-		};
 		FECACF762836B001005E4ABE /* ListViewTableCell */ = {
 			isa = PBXGroup;
 			children = (
-				FECACF772836B015005E4ABE /* ListTableViewCell.xib */,
-				FECACF792836B020005E4ABE /* ListTableViewCell.swift */,
+				FECACF7C2836D55A005E4ABE /* ListViewTableCell.xib */,
+				FECACF802836DB69005E4ABE /* ListViewTableCell.swift */,
 			);
 			path = ListViewTableCell;
 			sourceTree = "<group>";
@@ -298,7 +283,6 @@
 		FEF6FB012835A3E800CAFC5E /* Discovery */ = {
 			isa = PBXGroup;
 			children = (
-				FECACF6E283699A8005E4ABE /* Common */,
 				FEF6FB1E2835DAC500CAFC5E /* ListView */,
 				FEF6FB1C2835DAB700CAFC5E /* MapView */,
 				FEF6FB022835A3F900CAFC5E /* DiscoveryViewController.swift */,
@@ -312,7 +296,6 @@
 			isa = PBXGroup;
 			children = (
 				FEF6FB0E2835AB8B00CAFC5E /* TroubleshootViewController.swift */,
-				FEF6FB132835ABB000CAFC5E /* TroubleshootPresenter.swift */,
 				FEF6FB102835AB9800CAFC5E /* TroubleshootViewController.xib */,
 			);
 			path = Troubleshoot;
@@ -410,13 +393,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEF6FB112835AB9800CAFC5E /* TroubleshootViewController.xib in Resources */,
+				FECACF7D2836D55A005E4ABE /* ListViewTableCell.xib in Resources */,
 				FEF6FB222836094C00CAFC5E /* MapViewController.xib in Resources */,
 				FEF6FB292836140100CAFC5E /* ListViewController.xib in Resources */,
 				FEF6FAD9283057D700CAFC5E /* LaunchScreen.storyboard in Resources */,
-				FECACF782836B015005E4ABE /* ListTableViewCell.xib in Resources */,
 				FEF6FAD6283057D700CAFC5E /* Assets.xcassets in Resources */,
 				FEF6FAD4283057D600CAFC5E /* Main.storyboard in Resources */,
-				FECACF7528369A9B005E4ABE /* PlaceCard.xib in Resources */,
 				FEF6FB052835A40600CAFC5E /* DiscoveryViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,7 +469,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FECACF70283699B7005E4ABE /* PlaceCard.swift in Sources */,
 				FEF6FB2F28361D1700CAFC5E /* CurrentLocationEntity.swift in Sources */,
 				FEF6FAE3283058AF00CAFC5E /* PesentationProtocols.swift in Sources */,
 				FEF6FB162835CA6A00CAFC5E /* RequestLocationPermissionsEntity.swift in Sources */,
@@ -502,13 +483,12 @@
 				FECACF6828367A97005E4ABE /* PlacesRepo.swift in Sources */,
 				FEF6FAFD283575C300CAFC5E /* DomainErrors.swift in Sources */,
 				FEF6FB072835A41C00CAFC5E /* DiscoveryViewPresenter.swift in Sources */,
-				FEF6FB142835ABB000CAFC5E /* TroubleshootPresenter.swift in Sources */,
 				FEF6FB00283576F800CAFC5E /* String+Extension.swift in Sources */,
-				FECACF7A2836B020005E4ABE /* ListTableViewCell.swift in Sources */,
 				FEF6FB192835D26200CAFC5E /* Obfuscator.swift in Sources */,
 				FEF6FB342836297600CAFC5E /* GooglePlacesRestCall.swift in Sources */,
 				FECACF6C28367D94005E4ABE /* PlaceEntity.swift in Sources */,
 				FEF6FB252836095F00CAFC5E /* MapViewController.swift in Sources */,
+				FECACF812836DB69005E4ABE /* ListViewTableCell.swift in Sources */,
 				FEF6FB312836284900CAFC5E /* RestTransportManager.swift in Sources */,
 				FEF6FB2B2836141000CAFC5E /* ListViewController.swift in Sources */,
 				FEF6FB202836079800CAFC5E /* UIButton+Extension.swift in Sources */,

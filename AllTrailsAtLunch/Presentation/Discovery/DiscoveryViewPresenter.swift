@@ -14,7 +14,7 @@ struct DiscoveryState {
     }
     
     var activeMode: DiscoveryMode?
-    var desiredMode = DiscoveryMode.map
+    var desiredMode = DiscoveryMode.list
 }
 
 class DiscoveryViewPresenter: Presentable {

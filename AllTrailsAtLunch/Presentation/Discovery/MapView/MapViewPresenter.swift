@@ -37,11 +37,6 @@ class MapViewPresenter: Presentable {
                 break
             }
         }
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 5) {
-            let arguments = NearbyRestaurantsArguments(keyword: "mexican")
-            NearbyRestaurantsEntity.asyncRequest(arguments: arguments, handler: { _ in })
-        }
     }
     
     deinit {
