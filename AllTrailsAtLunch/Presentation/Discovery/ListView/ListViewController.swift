@@ -92,6 +92,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
             // Create Model and setup
             let model = ListViewTableCellModel(title: place.name ?? "",
                                                rating: place.rating ?? 0,
+                                               ratingCount: place.userRatingsTotal ?? 0,
                                                supportText: supportText)
             listCell.setup(model: model)
         }

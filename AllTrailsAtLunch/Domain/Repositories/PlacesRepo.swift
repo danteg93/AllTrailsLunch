@@ -8,7 +8,7 @@
 import Foundation
 
 class PlacesRepo {
-
+    
     
     private let placesDataSource = GooglePlacesDataSource.shared
     private let locationDataSource = LocationDataSource.shared
@@ -47,6 +47,22 @@ class PlacesRepo {
                 }
                 // Update Observers
                 self?.latestSearchPublisher.send(.success(entity))
+                handler(.success(entity))
+            } else {
+                handler(.failure(.dataSourceError))
+            }
+        }
+    }
+    
+    func getAdditionalDetails(arguments: GetAdditionalDetailsEntity.Arguments,
+                              handler: @escaping GetAdditionalDetailsEntity.ResultHandler) {
+        
+        self.placesDataSource.getPlaceDetails(placeId: arguments.placeId) { [handler] (data, error) in
+            guard error == nil else {
+                handler(.failure(.dataSourceError))
+                return
+            }
+            if let data = data, let entity = GetAdditionalDetailsEntity.fromData(data) {
                 handler(.success(entity))
             } else {
                 handler(.failure(.dataSourceError))

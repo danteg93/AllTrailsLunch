@@ -29,18 +29,6 @@ class MapViewController: LayoutReadyViewController, Displayable {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.createPresenter()
-        if let currentLocation = CurrentLocationEntity.syncRequest() {
-            let camera = GMSCameraPosition.camera(withLatitude: currentLocation.latitude,
-                                                  longitude: currentLocation.longitude,
-                                                  zoom: 13.0)
-            let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
-            self.view.addSubview(mapView)
-        } else {
-            let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-            let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
-            mapView.isMyLocationEnabled = true
-            self.view.addSubview(mapView)
-        }
     }
     
     override func viewIsReady() {
@@ -81,7 +69,6 @@ class MapViewController: LayoutReadyViewController, Displayable {
                 marker.userData = place.placeId ?? ""
             }
         }
-        
     }
     
     private func createMap() {

@@ -15,6 +15,7 @@ class GooglePlacesDataSource {
     
     enum Endpoint {
         static let nearbySearch = "nearbysearch"
+        static let details = "details"
     }
     
     enum Constants {
@@ -44,6 +45,18 @@ class GooglePlacesDataSource {
         }
         let apiCall = ApiCall(endpoint: Endpoint.nearbySearch,
                               requestType: .get,
+                              parameters: parameters) { [completion] (dataResponse, error) in
+            completion(dataResponse, error)
+        }
+        self.restTransport.enqueueCall(apiCall)
+    }
+    
+    func getPlaceDetails(placeId: String, completion: @escaping ApiResponse) {
+        let parameters: [String: AnyHashable] = ["key": Obfuscator().decrypt(key: Constants.apiKey),
+                                                 "place_id": placeId]
+        let apiCall = ApiCall(endpoint: Endpoint.details,
+                              requestType: .get,
+                              headers: [:],
                               parameters: parameters) { [completion] (dataResponse, error) in
             completion(dataResponse, error)
         }

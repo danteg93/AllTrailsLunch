@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		179011FE1553FDDA61187F20 /* Pods_AllTrailsAtLunch.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 217E43D51AB33939765B8D11 /* Pods_AllTrailsAtLunch.framework */; };
+		FEBE731728371B8500C3AA78 /* AdditionalDetailsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE731628371B8500C3AA78 /* AdditionalDetailsEntity.swift */; };
+		FEBE731928371ECF00C3AA78 /* GetAdditionalDetailsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEBE731828371ECF00C3AA78 /* GetAdditionalDetailsEntity.swift */; };
 		FECACF65283675FE005E4ABE /* NearbyRestaurantsEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF64283675FE005E4ABE /* NearbyRestaurantsEntity.swift */; };
 		FECACF6828367A97005E4ABE /* PlacesRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF6728367A97005E4ABE /* PlacesRepo.swift */; };
 		FECACF6C28367D94005E4ABE /* PlaceEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = FECACF6B28367D94005E4ABE /* PlaceEntity.swift */; };
@@ -57,6 +59,8 @@
 		217E43D51AB33939765B8D11 /* Pods_AllTrailsAtLunch.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AllTrailsAtLunch.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6F520B16280EAA5875215A /* Pods-AllTrailsAtLunch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTrailsAtLunch.release.xcconfig"; path = "Target Support Files/Pods-AllTrailsAtLunch/Pods-AllTrailsAtLunch.release.xcconfig"; sourceTree = "<group>"; };
 		CA93456A80C63185E1E63998 /* Pods-AllTrailsAtLunch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AllTrailsAtLunch.debug.xcconfig"; path = "Target Support Files/Pods-AllTrailsAtLunch/Pods-AllTrailsAtLunch.debug.xcconfig"; sourceTree = "<group>"; };
+		FEBE731628371B8500C3AA78 /* AdditionalDetailsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalDetailsEntity.swift; sourceTree = "<group>"; };
+		FEBE731828371ECF00C3AA78 /* GetAdditionalDetailsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetAdditionalDetailsEntity.swift; sourceTree = "<group>"; };
 		FECACF64283675FE005E4ABE /* NearbyRestaurantsEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearbyRestaurantsEntity.swift; sourceTree = "<group>"; };
 		FECACF6728367A97005E4ABE /* PlacesRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesRepo.swift; sourceTree = "<group>"; };
 		FECACF6B28367D94005E4ABE /* PlaceEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceEntity.swift; sourceTree = "<group>"; };
@@ -155,9 +159,11 @@
 			isa = PBXGroup;
 			children = (
 				FECACF6B28367D94005E4ABE /* PlaceEntity.swift */,
+				FEBE731628371B8500C3AA78 /* AdditionalDetailsEntity.swift */,
 				FECACF64283675FE005E4ABE /* NearbyRestaurantsEntity.swift */,
 				FECACF892836EF43005E4ABE /* SelectPlaceEntity.swift */,
 				FECACF8B2836F074005E4ABE /* GetSelectedPlaceEntity.swift */,
+				FEBE731828371ECF00C3AA78 /* GetAdditionalDetailsEntity.swift */,
 			);
 			path = Places;
 			sourceTree = "<group>";
@@ -499,7 +505,9 @@
 				FEF6FAE628313E0700CAFC5E /* LayoutReadyViewController.swift in Sources */,
 				FEF6FB272836099F00CAFC5E /* MapViewPresenter.swift in Sources */,
 				FEF6FAEA2832D86000CAFC5E /* ContainerSwitchPresenter.swift in Sources */,
+				FEBE731928371ECF00C3AA78 /* GetAdditionalDetailsEntity.swift in Sources */,
 				FEF6FAE8283167AF00CAFC5E /* ContainerSwitchViewController.swift in Sources */,
+				FEBE731728371B8500C3AA78 /* AdditionalDetailsEntity.swift in Sources */,
 				FEF6FB1B2835D34E00CAFC5E /* GooglePlacesDataSource.swift in Sources */,
 				FEF6FAFB2835756200CAFC5E /* LocationPermissionsEntity.swift in Sources */,
 				FEF6FAF52834588B00CAFC5E /* LocationDataSource.swift in Sources */,

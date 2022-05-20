@@ -11,6 +11,7 @@ import UIKit
 struct ListViewTableCellModel {
     let title: String
     let rating: Double
+    let ratingCount: Int
     let supportText: String
 }
 
@@ -18,6 +19,7 @@ class ListViewTableCell: UITableViewCell {
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var supportLabel: UILabel!
+    @IBOutlet private weak var ratingCountLabel: UILabel!
     
     @IBOutlet var starImageCollection: [UIImageView]!
     
@@ -41,6 +43,7 @@ class ListViewTableCell: UITableViewCell {
         DispatchQueue.main.async {
             self.titleLabel.text = model.title
             self.supportLabel.text = model.supportText
+            self.ratingCountLabel.text = "(\(model.ratingCount))"
             for imageIndex in 0..<5 {
                 self.starImageCollection[imageIndex].tintColor = Double(imageIndex) < model.rating.rounded() ? .orange : .lightGray
             }

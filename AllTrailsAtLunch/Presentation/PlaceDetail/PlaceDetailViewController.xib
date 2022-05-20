@@ -5,11 +5,13 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PlaceDetailViewController" customModule="AllTrailsAtLunch" customModuleProvider="target">
             <connections>
+                <outlet property="mapViewContainer" destination="rmO-4l-aPz" id="78G-CI-Ubq"/>
                 <outlet property="titleLabel" destination="v8K-Dm-BDw" id="UDU-Uy-IR7"/>
                 <outlet property="view" destination="iN0-l3-epB" id="C9y-oa-45i"/>
             </connections>
@@ -25,22 +27,45 @@
                         <constraint firstAttribute="width" secondItem="xom-Vh-dKQ" secondAttribute="height" multiplier="16:9" id="y6U-qX-bUX"/>
                     </constraints>
                 </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8K-Dm-BDw">
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v8K-Dm-BDw" userLabel="TitleLabel">
                     <rect key="frame" x="20" y="213" width="374" height="0.0"/>
                     <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                     <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rmO-4l-aPz" userLabel="mapView">
+                    <rect key="frame" x="20" y="631.5" width="374" height="210.5"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="rmO-4l-aPz" secondAttribute="height" multiplier="16:9" id="krZ-PY-SZh"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sJ6-2U-EHz" userLabel="infoContainer">
+                    <rect key="frame" x="20" y="253" width="374" height="358.5"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <color key="backgroundColor" name="AppBackground"/>
             <constraints>
+                <constraint firstItem="sJ6-2U-EHz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="27S-5r-OdS"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="v8K-Dm-BDw" secondAttribute="trailing" constant="20" id="FgD-4t-7oi"/>
+                <constraint firstItem="sJ6-2U-EHz" firstAttribute="top" secondItem="xom-Vh-dKQ" secondAttribute="bottom" constant="20" id="GYm-cR-2aA"/>
                 <constraint firstItem="xom-Vh-dKQ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="I4m-t7-rrA"/>
+                <constraint firstItem="sJ6-2U-EHz" firstAttribute="bottom" secondItem="rmO-4l-aPz" secondAttribute="top" constant="-20" id="Wx5-bP-KSZ"/>
                 <constraint firstItem="xom-Vh-dKQ" firstAttribute="bottom" secondItem="v8K-Dm-BDw" secondAttribute="bottom" constant="20" id="YQY-pE-tnj"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xom-Vh-dKQ" secondAttribute="trailing" id="Zxe-hN-LKU"/>
+                <constraint firstItem="rmO-4l-aPz" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="a72-Rt-qaW"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="rmO-4l-aPz" secondAttribute="bottom" constant="20" id="cd9-W5-d06"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="sJ6-2U-EHz" secondAttribute="trailing" constant="20" id="lub-qy-YHg"/>
                 <constraint firstItem="xom-Vh-dKQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="mvF-qT-0Wl"/>
                 <constraint firstItem="v8K-Dm-BDw" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="vYo-cW-uDl"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rmO-4l-aPz" secondAttribute="trailing" constant="20" id="zKJ-4h-jTF"/>
             </constraints>
             <point key="canvasLocation" x="41" y="116"/>
         </view>
@@ -50,5 +75,8 @@
         <namedColor name="AppBackground">
             <color red="0.97254901960784312" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
     </resources>
 </document>

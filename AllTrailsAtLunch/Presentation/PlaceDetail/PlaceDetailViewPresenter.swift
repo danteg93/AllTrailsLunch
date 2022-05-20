@@ -9,6 +9,7 @@ import Foundation
 
 struct PlaceDetailViewState {
     var selectedPlace: PlaceEntity? = nil
+    var aditionalDetails: AdditionalDetailsEntity? = nil
 }
 
 class PlaceDetailPresenter: Presentable {
@@ -23,5 +24,17 @@ class PlaceDetailPresenter: Presentable {
     func setup() {
         self.viewModel.selectedPlace = GetSelectedPlaceEntity.syncRequest()?.place
         self.display(.populated)
+        if let selectedPlaceId = self.viewModel.selectedPlace?.placeId {
+            let arguments = GetAdditionalDetailsArguments(placeId: selectedPlaceId)
+            GetAdditionalDetailsEntity.asyncRequest(arguments: arguments) { [weak self] (result) in
+                switch result {
+                case .failure:
+                    return
+                case .success(let entity):
+                    self?.viewModel.aditionalDetails = entity.result
+                    self?.display(.populated)
+                }
+            }
+        }
     }
 }
