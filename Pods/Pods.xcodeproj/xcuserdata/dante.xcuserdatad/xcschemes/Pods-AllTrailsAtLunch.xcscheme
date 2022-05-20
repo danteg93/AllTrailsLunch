@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "007BFE6260A20945A1F1035C5A8E6404"
-               BuildableName = "libPods-AllTrailsAtLunch.a"
+               BuildableName = "Pods_AllTrailsAtLunch.framework"
                BlueprintName = "Pods-AllTrailsAtLunch"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

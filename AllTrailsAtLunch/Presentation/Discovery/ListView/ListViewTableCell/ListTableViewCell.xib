@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="0.0" reuseIdentifier="ListTableViewCell" rowHeight="94" id="xlj-A9-vGM" customClass="ListTableViewCell" customModule="AllTrailsAtLunch" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xlj-A9-vGM" id="rka-2s-OT0">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="94"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="doO-Wj-uLo">
+                        <rect key="frame" x="5" y="5" width="404" height="84"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <accessibility key="accessibilityConfiguration" identifier="ListTableViewCell"/>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="doO-Wj-uLo" secondAttribute="trailing" constant="5" id="4Wd-nl-ZtL"/>
+                    <constraint firstItem="doO-Wj-uLo" firstAttribute="top" secondItem="rka-2s-OT0" secondAttribute="top" constant="5" id="7aD-7d-a7e"/>
+                    <constraint firstAttribute="bottom" secondItem="doO-Wj-uLo" secondAttribute="bottom" constant="5" id="8XD-3b-rYR"/>
+                    <constraint firstItem="doO-Wj-uLo" firstAttribute="leading" secondItem="rka-2s-OT0" secondAttribute="leading" constant="5" id="YBm-Ir-ZoA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="placesCardView" destination="doO-Wj-uLo" id="mPw-Fq-rSz"/>
+            </connections>
+            <point key="canvasLocation" x="-426.08695652173918" y="98.4375"/>
+        </tableViewCell>
+    </objects>
+</document>

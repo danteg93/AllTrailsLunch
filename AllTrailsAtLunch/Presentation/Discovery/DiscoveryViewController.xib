@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DiscoveryViewController" customModule="AllTrailsAtLunch" customModuleProvider="target">
+            <connections>
+                <outlet property="modeSwitchButton" destination="X4z-oM-uI1" id="Vag-SD-wZ1"/>
+                <outlet property="searchBar" destination="5VT-Bw-gRT" id="Mgr-DS-bdg"/>
+                <outlet property="view" destination="iN0-l3-epB" id="SHo-24-yWc"/>
+                <outlet property="viewContainer" destination="slj-cx-okX" id="IL8-te-rap"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="McP-Gb-sSa" userLabel="Header">
+                    <rect key="frame" x="0.0" y="44" width="414" height="110"/>
+                    <subviews>
+                        <searchBar contentMode="redraw" placeholder="Search for restaurants" translatesAutoresizingMaskIntoConstraints="NO" id="5VT-Bw-gRT">
+                            <rect key="frame" x="20" y="43" width="374" height="64"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64" id="bvf-HB-zcB"/>
+                            </constraints>
+                            <color key="tintColor" name="ActionBackground"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </searchBar>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="All Trails at lunch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXn-JY-AW4">
+                            <rect key="frame" x="20" y="0.0" width="374" height="47"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <color key="textColor" name="LabelTitle"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="qXn-JY-AW4" firstAttribute="leading" secondItem="McP-Gb-sSa" secondAttribute="leading" constant="20" id="8c4-XG-5ev"/>
+                        <constraint firstAttribute="height" constant="110" id="H6p-cg-xr7"/>
+                        <constraint firstAttribute="trailing" secondItem="qXn-JY-AW4" secondAttribute="trailing" constant="20" id="JGF-h1-Lin"/>
+                        <constraint firstAttribute="trailing" secondItem="5VT-Bw-gRT" secondAttribute="trailing" constant="20" id="SgC-cP-fCc"/>
+                        <constraint firstItem="5VT-Bw-gRT" firstAttribute="leading" secondItem="McP-Gb-sSa" secondAttribute="leading" constant="20" id="Tms-8O-3kE"/>
+                        <constraint firstItem="5VT-Bw-gRT" firstAttribute="top" secondItem="qXn-JY-AW4" secondAttribute="bottom" constant="-4" id="ajx-Xh-AZF"/>
+                        <constraint firstItem="qXn-JY-AW4" firstAttribute="top" secondItem="McP-Gb-sSa" secondAttribute="top" id="qRa-8l-uWG"/>
+                        <constraint firstAttribute="bottom" secondItem="5VT-Bw-gRT" secondAttribute="bottom" constant="3" id="tkP-2c-iHt"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="slj-cx-okX" userLabel="View Container">
+                    <rect key="frame" x="0.0" y="154" width="414" height="742"/>
+                </view>
+                <button opaque="NO" alpha="0.0" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X4z-oM-uI1" userLabel="ModeSwitch">
+                    <rect key="frame" x="192" y="797" width="30" height="45"/>
+                    <color key="backgroundColor" name="ActionBackground"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="45" id="H5D-L3-KdJ"/>
+                    </constraints>
+                    <color key="tintColor" name="ActionTitle"/>
+                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                    <state key="normal">
+                        <color key="titleColor" name="ActionTitle"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <integer key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="tappedModeSwitch" destination="-1" eventType="touchUpInside" id="mHr-mi-52X"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" name="AppBackground"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="X4z-oM-uI1" secondAttribute="bottom" constant="20" id="0bR-lJ-qtZ"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="McP-Gb-sSa" secondAttribute="trailing" id="8ZY-fd-hqM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="slj-cx-okX" secondAttribute="trailing" id="9fz-aY-RaR"/>
+                <constraint firstItem="slj-cx-okX" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="HUn-EO-BrN"/>
+                <constraint firstItem="X4z-oM-uI1" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="Qhg-7p-F1F"/>
+                <constraint firstItem="McP-Gb-sSa" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Xsi-JH-wLb"/>
+                <constraint firstItem="slj-cx-okX" firstAttribute="top" secondItem="McP-Gb-sSa" secondAttribute="bottom" id="bIf-z7-28t"/>
+                <constraint firstItem="McP-Gb-sSa" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="ln6-Cj-neK"/>
+                <constraint firstAttribute="bottom" secondItem="slj-cx-okX" secondAttribute="bottom" id="qJI-1a-lCM"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="154"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="ActionBackground">
+            <color red="0.29803921568627451" green="0.48627450980392156" blue="0.13333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ActionTitle">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="AppBackground">
+            <color red="0.97254901960784312" green="0.96862745098039216" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="LabelTitle">
+            <color red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
