@@ -13,8 +13,6 @@ class GooglePlacesRestCall: RestCall {
     var baseURL: String = "https://maps.googleapis.com/maps/api/place/"
     var endpoint: String
     var url: String {
-        let lol = baseURL + endpoint + "/json"
-        print(lol)
         return baseURL + endpoint + "/json"
     }
     var parameters: [String : AnyHashable]

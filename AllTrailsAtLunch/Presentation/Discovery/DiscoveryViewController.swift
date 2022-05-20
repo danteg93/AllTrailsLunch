@@ -76,6 +76,7 @@ class DiscoveryViewController: LayoutReadyViewController, Displayable {
         case .map:
             if self.mapViewController == nil {
                 self.mapViewController = MapViewController()
+                self.mapViewController?.delegate = self
             }
             selectedViewController = self.mapViewController
         case .list:
@@ -179,7 +180,7 @@ extension DiscoveryViewController: UISearchBarDelegate {
     
 }
 
-extension DiscoveryViewController: ListViewControllerDelegate {
+extension DiscoveryViewController: ListViewControllerDelegate, MapViewControllerDelegate {
     func placeTapped(placeIdSelected: String) {
         self.presenter?.setSelectedPlace(placeId: placeIdSelected)
     }

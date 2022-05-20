@@ -72,6 +72,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
         if let listCell = cell as? ListViewTableCell, let place = self.presenter?.viewModel.places[indexPath.row] {
             // Prepare Support Text
             var supportText = ""
+            // Set price level
             if let priceLevel = place.priceLevel {
                 if priceLevel == 0 {
                     supportText.append("Free")
@@ -81,6 +82,7 @@ extension ListViewController: UITableViewDelegate, UITableViewDataSource {
                     }
                 }
             }
+            // Set vicinity
             if let vicinity = place.vicinity {
                 if supportText.count != 0 {
                     supportText.append(" • ")

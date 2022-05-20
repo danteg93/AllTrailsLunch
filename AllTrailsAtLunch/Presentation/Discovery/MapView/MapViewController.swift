@@ -9,6 +9,10 @@ import Foundation
 import GoogleMaps
 import Combine
 
+protocol MapViewControllerDelegate: AnyObject {
+    func placeTapped(placeIdSelected: String)
+}
+
 class MapViewController: LayoutReadyViewController, Displayable {
     
     typealias State = MapViewState
@@ -17,6 +21,8 @@ class MapViewController: LayoutReadyViewController, Displayable {
     var placesSub: AnyCancellable?
     
     var presenter: MapViewPresenter?
+    
+    weak var delegate: MapViewControllerDelegate?
     
     private var mapView: GMSMapView?
     
@@ -72,8 +78,8 @@ class MapViewController: LayoutReadyViewController, Displayable {
                 marker.icon = GMSMarker.markerImage(with: UIColor(named: "ActionBackground"))
                 marker.title = place.name
                 marker.map = mapView
+                marker.userData = place.placeId ?? ""
             }
-            
         }
         
     }
@@ -98,14 +104,12 @@ class MapViewController: LayoutReadyViewController, Displayable {
 }
 
 extension MapViewController: GMSMapViewDelegate {
-    
-    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
-        print("Touched marker with \(marker.position)")
-        return false
-    }
-    
+        
     func mapView(_ mapView: GMSMapView, didTapInfoWindowOf marker: GMSMarker) {
-        print("TOuched info window of: \(marker.title)")
+        guard let placeId = marker.userData as? String else {
+            return
+        }
+        self.delegate?.placeTapped(placeIdSelected: placeId)
     }
     
 }
