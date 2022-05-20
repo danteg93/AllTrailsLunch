@@ -15,6 +15,10 @@ class PlaceDetailViewController: LayoutReadyViewController, Displayable {
     
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var mapViewContainer: UIView!
+    @IBOutlet private weak var addressLabel: UILabel!
+    @IBOutlet private weak var websiteLabel: UILabel!
+    @IBOutlet private weak var phoneLabel: UILabel!
+    @IBOutlet private weak var hoursLabel: UILabel!
     
     var presenter: PlaceDetailPresenter?
     
@@ -50,6 +54,21 @@ class PlaceDetailViewController: LayoutReadyViewController, Displayable {
             guard let place = self.presenter?.viewModel.selectedPlace else { return }
             self.updateMap()
             self.titleLabel.text = place.name
+            if let additionalDetails = self.presenter?.viewModel.aditionalDetails {
+                var openingHoursText = ""
+                if let weekText = additionalDetails.openingHours?.weekday_text {
+                    for (index, text) in weekText.enumerated() {
+                        openingHoursText.append(text)
+                        if index != weekText.count - 1 {
+                            openingHoursText.append("\n")
+                        }
+                    }
+                }
+                self.addressLabel.text = additionalDetails.address
+                self.websiteLabel.text = additionalDetails.website
+                self.phoneLabel.text = additionalDetails.phoneNumber
+                self.hoursLabel.text = openingHoursText
+            }
         }
     }
     
