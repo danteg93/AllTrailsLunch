@@ -19,6 +19,9 @@ class PlaceDetailViewController: LayoutReadyViewController, Displayable {
     @IBOutlet private weak var websiteLabel: UILabel!
     @IBOutlet private weak var phoneLabel: UILabel!
     @IBOutlet private weak var hoursLabel: UILabel!
+    @IBOutlet private weak var ratingCountLabel: UILabel!
+    
+    @IBOutlet var starImageCollection: [UIImageView]!
     
     var presenter: PlaceDetailPresenter?
     
@@ -52,8 +55,31 @@ class PlaceDetailViewController: LayoutReadyViewController, Displayable {
     private func populateView() {
         DispatchQueue.main.async {
             guard let place = self.presenter?.viewModel.selectedPlace else { return }
-            self.updateMap()
+            #if targetEnvironment(simulator)
+                // Skipping map because there is a known crash casued by GoogleMaps running on iOS15 simulators
+                // https://issuetracker.google.com/issues/208490523?pli=1
+            #else
+                self.updateMap()
+            #endif
             self.titleLabel.text = place.name
+            // Using rating count label to display price point
+            var ratingCountText = "(\(place.userRatingsTotal ?? 0))"
+            if let priceLevel = place.priceLevel {
+                ratingCountText.append(" • ")
+                if priceLevel == 0 {
+                    ratingCountText.append("Free")
+                } else {
+                    for _ in 0 ..< priceLevel {
+                        ratingCountText.append("$")
+                    }
+                }
+            }
+            self.ratingCountLabel.text = ratingCountText
+            // Set Rating
+            for imageIndex in 0..<5 {
+                self.starImageCollection[imageIndex].tintColor = Double(imageIndex) < (place.rating ?? 0).rounded() ? .orange : .lightGray
+            }
+            // Populate Additional Details
             if let additionalDetails = self.presenter?.viewModel.aditionalDetails {
                 var openingHoursText = ""
                 if let weekText = additionalDetails.openingHours?.weekday_text {
